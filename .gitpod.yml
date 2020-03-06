@@ -1,7 +1,9 @@
 image:
   file: .gitpod.dockerfile
 tasks:
- - init: . ${GITPOD_REPO_ROOT}/.theia/init_tasks.sh    
+  - init: . ${GITPOD_REPO_ROOT}/.theia/init_tasks.sh
+  - name: alias
+    command: echo 'alias run="python3 /workspace/rugby-shop/manage.py runserver $IP:$PORT"' >> ~/.bashrc && source ~/.bashrc
 vscode:
   extensions:
     - ms-python.python@2019.8.30787:TnGEOx35GXMhyKLjDGz9Aw==
