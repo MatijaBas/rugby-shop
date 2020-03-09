@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
-from accounts.forms import UserLoginForm
+from accounts.forms import UserLoginForm, UserRegistrationForm
 
 
 def index(request):
@@ -38,3 +38,9 @@ def login(request):
     else:
         login_form = UserLoginForm()
     return render(request, 'login.html', {'login_form': login_form})
+
+
+def register(request):
+    """A view to manage the registration form"""
+    registration_form = UserRegistrationForm()
+    return render(request, 'register.html', {"registration_form": registration_form})
