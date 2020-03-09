@@ -1,26 +1,9 @@
 <!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
 
-<head>
-	<title>Rugby Shop</title>
-</head>
+<!-- Page title here -->
+{% block page_title %}Home Page | Rugby Shop{% endblock %}
 
-<body>
-	<h1>Welcome to <br>Rugby Shop</h1>
-		<nav>
-			<ul>
-				<li><a href="{% url 'login' %}">Login</a></li>
-				<li><a href="{% url 'logout' %}">Logout</a></li>
-				<li><a href="#">Register</a></li>
-				<li><a href="#">Profile</a></li>
-			</ul>
-		</nav>
-
-		<hr> {% if messages %}
-		<div>
-			{% for message in messages %} {{ message }} {% endfor %}
-		</div>
-		{% endif %}
-</body>
-
-</html>
+{% block page_heading %}
+<h1 class="display-4 text-white">Welcome to <br>Rugby Shop</h1>
+	{% endblock %}
