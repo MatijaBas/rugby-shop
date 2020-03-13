@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
+{% load bootstrap_tags %}
 
 <!-- Page title here -->
 {% block page_title %}Login Page | Rugby Shop{% endblock %}
 
+<!-- Page heading here -->
 {% block page_heading %}
-<h2 class="text-white text-center">User Login</h2>
+<div class="row justify-content-center">
+	<div class="col-12 col-md-6">
+		<!-- Page Headline, so the user knows which page they are on -->
+		<h2 class="text-white text-center">User Login</h2>
+	</div>
+</div>
 {% endblock %}
+
+<!-- Login form -->
 {% block content %}
-<form method="POST">
-	{% csrf_token %} {{ login_form }}
-	<p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
-	<button type="submit">Login</button>
-</form>
+<div class="row justify-content-center text-light ml-1 mr-1">
+	<div class="col-12 col-md-6">
+		<form method="POST" class="accountform">
+			<fieldset class="form-group">
+				<legend>Login</legend>
+				{% csrf_token %} {{ login_form }}
+				<p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
+
+				<button type="submit" class="btn btn-primary">Login</button>
+
+			</fieldset>
+		</form>
+
+	</div>
+</div>
 {% endblock %}

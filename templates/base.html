@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +9,8 @@
 	<!-- Bootstrap css -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+	<!-- Customised CSS -->
+	<link rel="stylesheet" href="{% static 'css/custom.css' %}">
 	<!-- Scripts for Bootstrap -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -22,27 +24,90 @@
 </head>
 
 <body>
-	<h1>
-		{% block page_heading %}{% endblock %}
-	</h1>
 
-	<nav>
-		<ul>
-			{% if user.is_authenticated %}
-			<li><a href="{% url 'profile' %}">Profile</a></li>
-			<li><a href="{% url 'logout' %}">Logout</a></li>
-			{% else %}
-			<li><a href="{% url 'login' %}">Login</a></li>
-			<li><a href="{% url 'register' %}">Register</a></li>
-			{% endif %}
-		</ul>
+
+	<!-- Fixed navbar, with if statement, depending if user is logged in or out -->
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+		<!-- Navbar brand -->
+		<a class="navbar-brand" href="{% url 'index' %}">Rugby Shop</a>
+		<!-- Collapsible button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+		<!-- Collapsible content -->
+		<div class="collapse navbar-collapse" id="navbar">
+			<!-- Links -->
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">Home
+						<span class="sr-only">(current)</span></a></li>
+
+				{% if user.is_authenticated %}
+				<li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
+				<li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Log Out</a></li>
+				{% else %}
+				<li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Register</a></li>
+				<li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Log In</a></li>
+				{% endif %}
+			</ul>
+
+			<ul class="navbar-nav ml-auto">
+				<!-- The nav links that will be there regardless of whether the user is logged in our out -->
+				<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Inspire</a></li>
+
+				<!-- This will put a link into the navigation bar,
+                     so the user can check which items are currently in the shopping cart,
+                     and also show if there are any products in it at all, or not. -->
+				<li class="nav-item">
+					<a class="nav-link" href="#">
+						<i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart
+						{% if product_count > 0 %}
+						<span class="badge badge-warning">{{ product_count }}</span>
+						{% endif %}
+					</a>
+				</li>
+				<!-- Link to contact form -->
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contact</a>
+				</li>
+			</ul>
+
+
+		</div>
 	</nav>
 
-	<hr> {% if messages %}
-	<div>
-		{% for message in messages %} {{ message }} {% endfor %}
+	<!-- First container, with background image -->
+	<div class="container-fluid bg_image">
+		<div class="opaque-overlay">
+
+			<!-- Alert messages -->
+			{% if messages %}
+			<div class="alert alert-success">
+				<div class="messages">
+					{% for message in messages %}
+					{{ message }}
+					{% endfor %}
+				</div>
+			</div>
+			{% endif %}
+
+			<!-- Headline -->
+			{% block page_heading %}
+			{% endblock %}
+
+			<!-- Row for search bar for the products -->
+			{% block search %}
+			{% endblock %}
+
+			<!-- Login, Register and Contact forms, users Profile, Shop, Cart -->
+			{% block content %}
+			{% endblock %}
+
+		</div>
 	</div>
-	{% endif %} {% block content %}{% endblock %}
 </body>
 
 </html>

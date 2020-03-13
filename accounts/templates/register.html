@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
+{% load bootstrap_tags %}
 
 <!-- Page title here -->
 {% block page_title %}Registration Page | Rugby Shop{% endblock %}
 
 {% block page_heading %}
-<h2 class="text-white text-center">User Registration</h2>
+<div class="row justify-content-center">
+	<div class="col-12 col-md-6">
+		<!-- Page Headline, so the user knows which page they are on -->
+		<h2 class="text-white text-center">User Registration</h2>
+	</div>
+</div>
 {% endblock %}
-{% block content %}
-<p>If you already have an account, you can <a href="{% url 'login' %}">sign in</a></p>
 
-<form method="POST">
-	{% csrf_token %} {{ registration_form.as_p }}
-	<button type="submit">Register</button>
-</form>
+<!-- Register Form -->
+{% block content %}
+<div class="row justify-content-center text-light ml-1 mr-1">
+	<div class="col-12 col-md-6">
+		<p>If you already have an account, you can <a href="{% url 'login' %}">sign in</a></p>
+
+		<form method="POST" class="accountform">
+			{% csrf_token %}
+			{{ registration_form | as_bootstrap }}
+			<button type="submit" class="btn btn-primary">Register</button>
+		</form>
+	</div>
+</div>
 {% endblock %}
