@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+<!-- Page title here -->
+{% block page_title %}Rugby Shop | Contact Page{% endblock %}
+
+<!-- Page heading here -->
+{% block page_heading %}
+<div class="row justify-content-center">
+	<div class="col-12 col-md-6">
+		<!-- Page Headline, so the user knows which page they are on -->
+		<h2 class="text-white text-center">Contact me</h2>
+	</div>
+</div>
+{% endblock %}
+
+<!-- Contact Form -->
+{% block content %}
+<div class="row justify-content-center text-light ml-1 mr-1">
+	<div class="col-12 col-md-6">
+		<div class="contact-form-wrapper mx-auto my-3">
+			<form id="contact-form" method="POST">
+				{% csrf_token %}
+				<fieldset class="form-group">
+					<legend>Get in touch!</legend>
+					<p>Got a question for me? Don´t hesitate to get in touch.<br>
+                            Send me a message and I´ll be with you shortly!
+						<hr>
+						{{ contact_form |crispy }}
+				</fieldset>
+				<div class="form-group">
+					<button class="btn btn-primary contact_btn" type="submit">Send</button>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</div>
+{% endblock %}
