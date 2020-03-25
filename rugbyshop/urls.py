@@ -17,8 +17,12 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from accounts.views import index
 from accounts import urls as accounts_urls
+from products import urls as urls_products
+from products.views import all_products
 from home import urls as urls_home
 from home.views import contact
+from django.views import static
+from .settings import MEDIA_ROOT
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -26,4 +30,7 @@ urlpatterns = [
     url(r'^accounts/', include(accounts_urls)),
     url(r'^home/', include(urls_home)),
     url(r'^contact/', contact, name='contact'),
+    url(r'^products/', include(urls_products)),
+    url(r'^products/', all_products, name='all_products'),
+    url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
 ]

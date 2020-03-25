@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Display products row-->
+<div class="row justify-content-around products_row bg-light rounded">
+	{% for product in products %}
+	<div class="col-12 col-md-6 col-lg-4 text-center panel_default">
+		<div class="card products_card">
+			<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+
+			<h3>{{ product.name }}</h3>
+			<p class="product-description">{{ product.description }}</p>
+			<p>{{ product.price }}</p>
+
+			<form method="post" action="{% url 'add_to_cart' product.id %}">
+				{% csrf_token %}
+				<div class="input-group">
+					<input name="quantity" type="number" min="1" max="5" class="form-control" placeholder="Quantity" required>
+					<span class="input-group-btn">
+                        <button class="btn btn-success" type="submit">Add</button>
+                    </span>
+				</div>
+			</form>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}
