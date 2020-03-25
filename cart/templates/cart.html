@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+
+<!-- Page title here -->
+{% block page_title %}Cart | Rugby Shop{% endblock %}
+
+<!-- Page heading here -->
+{% block page_heading %}
+<div class="row justify-content-center">
+	<div class="col-12">
+		<!-- Page Headline, to show the user which page they are on -->
+		<h2 class="text-light text-center products_heading">Your Cart</h2>
+		<br>
+    </div>
+	</div>
+	{% endblock %}
+
+
+	{% block content %}
+
+	<!-- Shopping cart -->
+	<div class="row bg-light text-dark mb-2 ml-1 mr-1 rounded">
+
+		<!-- Cart content displayed in a table-->
+		<div class="col-xs-12 col-md-8 col-lg-10 mx-auto">
+			{% if product_count > 0 %}
+			<div class="table-responsive-xs">
+				<table class="table">
+					<thead class="border-bottom align-left inline-block">
+						<tr>
+							<th scope="col" class="p-1 border-0 bg-light inline-block">
+								<div class="text-uppercase text-center">Product</div>
+							</th>
+							<th scope="col" class="p-1 border-0 bg-light inline-block">
+								<div class="text-uppercase text-center">Price</div>
+							</th>
+							<th scope="col" class="p-1 border-0 bg-light inline-block pr-2">
+								<div class="text-uppercase text-center">Quantity</div>
+							</th>
+							<th scope="col" class="p-1 border-0 bg-light inline-block">
+								<div class="text-uppercase text-center">Amend Order</div>
+							</th>
+						</tr>
+					</thead>
+					<!-- If there are items in the cart the table will show, and if it´s empty only the Cart is empty button will show -->
+					<tbody>
+						<!-- A for loop that runs through all items in the cart -->
+						{% for item in cart_items %}
+						<tr>
+							<th scope="row" class="border-0">
+								<div class="p-1">
+									<img src="{{ MEDIA_URL }}{{ item.product.image }}" alt="product" width="70" class="img-fluid rounded shadow-sm">
+									<div class="inline-block align-middle">
+										<div class="mb-0 inline-block align-middle text-dark text-small">
+											{{ item.product.name }}</div>
+									</div>
+								</div>
+							</th>
+							<td
+								class="p-0 col border-0 border-secondary inline-block text-center align-middle text-dark">
+								<strong>€ {{ item.product.price }}</strong></td>
+							<td class="pr-1 col border-0 inline-block align-middle text-center text-dark">
+								<strong>{{item.quantity}}</strong></td>
+							<td class="p-0 col border-0 inline-block text-center align-middle mr-3">
+								<form class="text-center border-0" method="post"
+									action="{% url 'adjust_cart' item.id %}">
+									{% csrf_token %}
+									<div class="form-group mb-3">
+										<label for="InputAmount" class="sr-only">Change Qty</label>
+										<div class="input-group">
+											<div class="input-group-addon">Qty</div>
+											<input name="quantity" id="InputAmount" type="number" min="0" max="99" class="form-control" placeholder="Qty" required>
+											<div class="input-group-addon"></div>
+										</div>
+									</div>
+									<button type="submit" class="btn btn-warning"><span aria-hidden="true"></span>Amend</button>
+									<div class="text-muted align-left"><small>Or remove by changing the qty to 0</small>
+									</div>
+								</form>
+							</td>
+						</tr>
+						{% endfor %}
+
+					</tbody>
+
+				</table>
+			</div>
+
+			<!-- Order Summary -->
+			<div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold border-bottom">Order summary
+			</div>
+			<div class="p-4">
+				<p class="font-italic mb-4 text-dark">Shipping and additional costs are included in the Product prices.
+				</p>
+				<!-- Shows the Total of the products in the cart, and the user are able to proceed to Checkout -->
+				<ul class="list-unstyled mb-4">
+					<li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-dark">Total Amount
+                        </strong>
+						<h5 class="font-weight-bold text-dark">€ {{ total }}</h5>
+					</li>
+				</ul><a href="{% url 'checkout' %}" class="btn btn-success text-white">Checkout</a>
+			</div>
+			{% else %}
+			<div class="col-12">
+				<br>
+				<a class="btn btn-info btn-lg btn-block mb-3" href="{% url 'all_products' %}" role="button">The Cart is
+					empty - Return to
+					Shop</a>
+			</div>
+
+			{% endif %}
+		</div>
+	</div>
+
+	{% endblock %}

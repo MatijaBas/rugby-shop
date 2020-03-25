@@ -56,13 +56,13 @@
 				<li class="nav-item"><a class="nav-link" href="#">About</a></li>
 				<li class="nav-item"><a class="nav-link" href="{% url 'all_products' %}">Shop</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Inspire</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
 
 				<!-- This will put a link into the navigation bar,
                      so the user can check which items are currently in the shopping cart,
                      and also show if there are any products in it at all, or not. -->
 				<li class="nav-item">
-					<a class="nav-link" href="#">
+					<a class="nav-link" href="{% url 'view_cart' %}">
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart
 						{% if product_count > 0 %}
 						<span class="badge badge-warning">{{ product_count }}</span>
@@ -107,6 +107,17 @@
 			{% endblock %}
 
 		</div>
+	</div>
+
+	<!-- Second container, with About me and Featured products content -->
+	<div class="container-fluid ">
+		<!-- Row for About_me block content -->
+		{% block about_content %}
+		{% endblock %}
+
+		<!-- Row for Featured Products block content -->
+		{% block featured_products %}
+		{% endblock %}
 	</div>
 </body>
 
