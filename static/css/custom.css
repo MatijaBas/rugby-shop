@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i&display=swap');
+
 html, body {
   height: 100%;
   
@@ -6,7 +8,7 @@ html, body {
 }
 
 body {
-    font-family: 'Alegreya', serif;
+    font-family: 'Merriweather', serif;
     padding-top: 55px; 
     display: flex;
     flex-direction: column;
@@ -20,6 +22,22 @@ body {
     background-color: #e9eea1;
 }
 
+
+/* -------- Label, badge for Cart in Navbar ---------*/
+
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    background-color: #07ff8a;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+    background-color: #07ff8a;
+}
 
 /*--------- Background image ---------------------------------------------*/
 
@@ -69,6 +87,64 @@ body {
     padding-bottom: 30px;
 }
 
+
+/*------------Shop page content----------------------------------------- */
+
+
+/*--- Search btn ----*/
+.search_btn {
+    font-size: 15px;
+}
+
+caption p {
+    word-wrap: break-word;
+}
+
+.products_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    align-content: center;
+    height: 60%;
+}
+
+.panel-default {
+    border-color: transparent;
+    padding: 15px;
+    margin: 15px;
+    background-color: white;
+}
+
+
+/* The product image */
+.product {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.products_card {
+    border: 1px solid #ddd;
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 450px;
+    max-height: 450px;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.products_heading {
+    padding-top: 70px;
+}
+
+
+.product-description {
+    min-height: 40px;
+}
 
 
 /*---------- Contact form ----------------------------------------------*/
