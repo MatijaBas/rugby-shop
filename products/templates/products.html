@@ -1,7 +1,42 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 
+<!-- Page title here -->
+{% block page_title %}Products for sale | Rugby Shop{% endblock %}
+
+<!-- Page heading here -->
+{% block page_heading %}
+<div class="row justify-content-center products_heading mb-1">
+	<div class="col-12">
+		<!-- Page Headline, to show the user which page they are on -->
+		<h2 class="text-light text-center">Have a look around</h2>
+	</div>
+</div>
+{% endblock %}
+
+<!-- The form for the products search box -->
+{% block search %}
+<div class="row justify-content-center">
+	<div class="col-12">
+		<div class="display text-center">
+			<form action="{% url 'search' %}" method="get">
+				<input class="rounded" type="text" name="q" placeholder="Search for Products here..">
+				<button type="submit" class="btn btn-info btn-sm">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
 {% block content %}
+
+<!-- Button to view all products, visible on all screen sizes -->
+<div class="row justify-content-center">
+	<div class="col-12 text-center d-block">
+		<a href="{% url 'all_products' %}" class="btn btn-success mt-3">View all</a>
+	</div>
+</div>
+
 <!-- Display products row-->
 <div class="row justify-content-around products_row bg-light rounded">
 	{% for product in products %}

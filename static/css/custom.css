@@ -1,0 +1,78 @@
+html, body {
+  height: 100%;
+  
+  /* makes a smooth scroll (not supported in firefox and explorer) */
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Alegreya', serif;
+    padding-top: 55px; 
+    display: flex;
+    flex-direction: column;
+    background-color: #c0c0c0;
+}
+
+
+/*-------Navbar ------------------------------------------------------ */
+
+.navbar {
+    background-color: #e9eea1;
+}
+
+
+/*--------- Background image ---------------------------------------------*/
+
+.bg_image {
+    background: url("/static/img/background2.jpg") no-repeat center center fixed;
+    background-color: #f5f6fa;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center;
+    width: 100%;
+    margin: auto;
+    z-index: 1;
+    padding: 0px;
+    overflow: hidden;
+    flex: 1 0 auto;
+        
+}
+
+/*----- Background Image overlay ----- */
+
+.opaque-overlay {
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/*-----images for featured products row-----*/
+
+.bg_images_featured {
+    background-color: #c0e9e2;
+    background-size: cover;
+    width: 100%;
+    margin: auto;
+    z-index: -1;
+    padding: 0px;
+}
+
+
+/*---------- Register and Login forms -----------------------------------*/
+.accountform {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+
+
+/*---------- Contact form ----------------------------------------------*/
+
+.contact_btn {
+    margin-bottom: 15px;
+}

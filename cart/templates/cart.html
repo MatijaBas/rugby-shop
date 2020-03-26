@@ -87,20 +87,19 @@
 
 				</table>
 			</div>
-
 			<!-- Order Summary -->
 			<div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold border-bottom">Order summary
 			</div>
 			<div class="p-4">
-				<p class="font-italic mb-4 text-dark">Shipping and additional costs are included in the Product prices.
+				<p class="font-italic mb-4 text-dark">Shipping is included in the Product prices.
 				</p>
 				<!-- Shows the Total of the products in the cart, and the user are able to proceed to Checkout -->
 				<ul class="list-unstyled mb-4">
 					<li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-dark">Total Amount
-                        </strong>
+                      </strong>
 						<h5 class="font-weight-bold text-dark">€ {{ total }}</h5>
 					</li>
-				</ul><a href="{% url 'checkout' %}" class="btn btn-success text-white">Checkout</a>
+				</ul><a href="#" class="btn btn-success text-white">Checkout</a>
 			</div>
 			{% else %}
 			<div class="col-12">

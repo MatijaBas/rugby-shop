@@ -19,6 +19,7 @@ from accounts.views import index
 from accounts import urls as accounts_urls
 from products import urls as urls_products
 from cart import urls as urls_cart
+from search import urls as urls_search
 from products.views import all_products
 from home import urls as urls_home
 from home.views import contact
@@ -32,6 +33,7 @@ urlpatterns = [
     url(r'^products/', include(urls_products)),
     url(r'^products/', all_products, name='all_products'),
     url(r'^cart/', include(urls_cart)),
+    url(r'^search/', include(urls_search)),
     url(r'^home/', include(urls_home)),
     url(r'^contact/', contact, name='contact'),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),

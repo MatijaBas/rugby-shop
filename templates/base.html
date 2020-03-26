@@ -9,14 +9,19 @@
 	<!-- Bootstrap css -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<!-- Customised CSS -->
-	<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
 	<!-- Scripts for Bootstrap -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s=" crossorigin="anonymous"></script>
+
+	<!-- Font Awesome CSS -->
+	<link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+
+	<!-- Customised CSS -->
+	<link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
 
 	<!-- Page Title -->
@@ -109,16 +114,7 @@
 		</div>
 	</div>
 
-	<!-- Second container, with About me and Featured products content -->
-	<div class="container-fluid ">
-		<!-- Row for About_me block content -->
-		{% block about_content %}
-		{% endblock %}
 
-		<!-- Row for Featured Products block content -->
-		{% block featured_products %}
-		{% endblock %}
-	</div>
 </body>
 
 </html>
