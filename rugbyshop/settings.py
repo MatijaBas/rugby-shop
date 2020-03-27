@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8080-a82cff32-48b8-4a4f-9f75-ff52fccfe60c.ws-eu01.gitpod.io',
-                 'https://rugby-shop.herokuapp.com']
+                 'rugby-shop.herokuapp.com']
 
 
 # Application definition
