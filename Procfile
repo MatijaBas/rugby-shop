@@ -1,0 +1,1 @@
+web: gunicorn rugbyshop.wsgi:application
