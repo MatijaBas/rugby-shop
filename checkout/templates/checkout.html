@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+
+<!-- Page title here -->
+{% block page_title %}Checkout | Rugby Shop{% endblock %}
+
+<!-- contains the JavaScript that Stripe requires -->
+{% block head_js %}
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+	//<![CDATA[
+        Stripe.publishableKey = '{{ publishable }}';
+    //]]>
+</script>
+<script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
+{% endblock %}
+
+
+<!-- Page heading here -->
+{% block page_heading %}
+<div class="row justify-content-center">
+	<div class="col-12">
+		<!-- Page Headline, to show the user which page they are on -->
+		<h2 class="text-light text-center products_heading">Checkout form</h2>
+		<br>
+    </div>
+	</div>
+	{% endblock %}
+
+
+	{% block content %}
+	<!-- The products the user will buy displayed in a table-->
+	<div class="row justify-content-center bg-light text-dark mb-2 ml-2 mr-2 rounded">
+		<div class="col-12 col-md-8 col-lg-10 mx-auto">
+			<table class="table">
+				<thead class="border-bottom">
+					<tr>
+						<th scope="col" class="border-0 bg-light table_center">
+							<div class="p-2 px-3 text-uppercase">Product</div>
+						</th>
+						<th scope="col" class="border-0 bg-light table_center">
+							<div class="py-2 text-uppercase">Total Price</div>
+						</th>
+						<th scope="col" class="border-0 bg-light table_center">
+							<div class="py-2 text-uppercase">Quantity</div>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- A for loop that runs through all items in the cart to display on checkout page-->
+					{% for item in cart_items %}
+					<tr>
+						<th scope="row" class="border-0 table_left">
+							<div class="p-2">
+								<img src="{{ MEDIA_URL }}{{ item.product.image }}" alt="product" width="50" class="img-fluid rounded shadow-sm">
+								<div class="ml-3 d-inline-block align-middle">
+									<h5 class="mb-0 d-inline-block align-middle text-dark">{{ item.product.name }}</h5>
+								</div>
+							</div>
+						</th>
+						<td class="border-0 border-secondary align-middle table_center text-dark">
+							<strong>€ {{ item.product.price }}</strong></td>
+						<td class="border-0 align-middle table_center text-dark"><strong>{{item.quantity}}</strong></td>
+						<td class="border-0 align-middle table_center">
+						</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- The forms required for the checkout process -->
+	<div class="row justify-content-center text-dark mb-2 ml-2 mr-2">
+		<div class="col-md-12 mx-auto bg-light rounded">
+			<!-- the order form and the payment form with a submit button -->
+			<form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
+				<legend>Payment Details</legend>
+				{% csrf_token %}
+
+				<!-- returns any credit card error message  -->
+				<div id="credit-card-errors" style="display: none;">
+					<div class="alert-message block-message error" id="stripe-error-message"></div>
+				</div>
+
+				<!-- the forms put on top of each other, so it looks like one form -->
+				<div class="form-group col-md-12">
+					{{ order_form | as_bootstrap }}
+				</div>
+
+				<div class="form-group col-md-12">
+					{{ payment_form | as_bootstrap }}
+				</div>
+
+				{% csrf_token %}
+				<div class="form-group col-md-12">
+					<input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+        </div>
+			</form>
+		</div>
+	</div>
+
+	{% endblock %}
