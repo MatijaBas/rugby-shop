@@ -5,10 +5,25 @@
 {% block page_title %}Your account | Rugby Shop{% endblock %}
 
 {% block page_heading %}
-<h2 class=" text-center text-white">{{ user }}'s Profile</h2>
+<div class="row justify-content-center">
+	<div class="col-12 col-md-6">
+		<br>
+		<h2 class=" text-center text-white">{{ user }}'s Profile</h2>
+	</div>
+</div>
 {% endblock %}
 
+<!-- The Profile section with the users username and email, and information about what you can do when you are logged in -->
 {% block content %}
-<p> You are logged in as {{ user }} </p>
-<p>Email Address: {{ user.email }}</p>
+<div class="row justify-content-center">
+	<div class="col-10 col-md-4 text-center bg-light rounded mb-3">
+		<br>
+		<p class="text-dark lead"><i class="fa fa-user"></i> You are logged in as {{ user }} </p>
+		<p class="text-muted">Email Address: {{ user.email }}</p>
+		<p class="text-dark">When you´re logged in you are able to add Review posts in the Inspire Page to share
+			with others, and you are also able to proceed to Checkout when you have added products to your Cart. Enjoy!
+		</p>
+		<a class="btn btn-success text-white mt-3 mb-3" href="{% url 'all_products' %}" role="button">Go to Shop</a>
+	</div>
+</div>
 {% endblock %}
