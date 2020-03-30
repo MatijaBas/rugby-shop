@@ -20,7 +20,7 @@
 
 	<!-- Font Awesome CSS -->
 	<link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
-
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<!-- Customised CSS -->
 	<link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
@@ -47,28 +47,29 @@
 		<div class="collapse navbar-collapse" id="navbar">
 			<!-- Links -->
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">Home
+				<li class="nav-item active"><a class="nav-link" href="{% url 'index' %}"><i class="fa fa-home"></i>Home
 						<span class="sr-only">(current)</span></a></li>
 
 				{% if user.is_authenticated %}
 				<li class="nav-item"><a class="nav-link" href="{% url 'profile' %}"><i class="fa fa-user"></i>
 						Profile</a></li>
-				<li class="nav-item"><a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log
-						Out</a></li>
+				<li class="nav-item"><a class="nav-link"
+						href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
 				{% else %}
 				<li class="nav-item"><a class="nav-link" href="{% url 'register' %}"><i class="fa fa-user-plus"></i>
 						Register</a></li>
-				<li class="nav-item"><a class="nav-link" href="{% url 'login' %}"><i class="fa fa-sign-in"></i>Log
+				<li class="nav-item"><a class="nav-link" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i>Log
 						In</a></li>
 				{% endif %}
 			</ul>
 
 			<ul class="navbar-nav ml-auto">
 				<!-- The nav links that will be there regardless of whether the user is logged in our out -->
-				<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-				<li class="nav-item"><a class="nav-link" href="{% url 'all_products' %}">Shop</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
+				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-football-ball"></i>About</a></li>
+				<li class="nav-item"><a class="nav-link"
+						href="{% url 'all_products' %}"><i class="fab fa-shopware"></i>Shop</a></li>
+				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-blog"></i>Blog</a></li>
+				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-comments"></i>Reviews</a></li>
 
 				<!-- This will put a link into the navigation bar,
                      so the user can check which items are currently in the shopping cart,
@@ -83,7 +84,7 @@
 				</li>
 				<!-- Link to contact form -->
 				<li class="nav-item">
-					<a class="nav-link" href="{% url 'contact' %}">Contact</a>
+					<a class="nav-link" href="{% url 'contact' %}"><i class="fas fa-id-card-alt"></i>Contact</a>
 				</li>
 			</ul>
 
@@ -127,17 +128,21 @@
 				<!--Social Media-->
 				<div class="col-md-12 text-center">
 					<div class="mb-1 flex-centre">
-						<a class="ic-fb" href="https://github.com/MatijaBas/rugby-shop" target="_blank"
+						<a class="ic-gh" href="https://github.com/MatijaBas/rugby-shop" target="_blank"
 							aria-label="Find me on GitHub" rel="noopener">
 							<i class="fab fa-github-square fa-lg mr-md-5 mr-3 fa-2x" title="MatijaBass"></i>
 						</a>
-						<a class="ic-pin" href="https://www.linkedin.com/in/matija-basanovic/" target="_blank"
+						<a class="ic-lin" href="https://www.linkedin.com/in/matija-basanovic/" target="_blank"
 							aria-label="LinkedIn - Matija Basanovic" rel="noopener">
 							<i class="fab fa-linkedin fa-lg mr-md-5 mr-3 fa-2x" title="Matija Basanovic"></i>
 						</a>
-						<a class="ic-ins" href="https://codeinstitute.net/" target="_blank"
+						<a class="ic-cod" href="https://codeinstitute.net/" target="_blank"
 							aria-label="Find me on Instagram" rel="noopener">
-							<i class="fas fa-laptop-code fa-lg mr-md-5 mr-3 fa-2x"></i>
+							<i class="fa fa-laptop fa-lg mr-md-5 mr-3 fa-2x" title="Codeinstitute"></i>
+						</a>
+						<a class="ic-gh" href="https://github.com/MatijaBas/rugby-shop" target="_blank"
+							aria-label="Find me on GitHub" rel="noopener">
+							<i class="fab fa-youtube fa-lg mr-md-5 mr-3 fa-2x" title="MatijaBass"></i>
 						</a>
 					</div>
 					<!--Copyright-->
