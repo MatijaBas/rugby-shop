@@ -157,7 +157,7 @@ caption p {
 /* --------------------Footer------------------------- */
 
 .page-footer {
-  background-image: linear-gradient(-90deg, #33afe8, #2c723b);
+  background-color: green;
   font-size: 1.5rem;
   padding: 1rem 0;
 }
@@ -166,6 +166,7 @@ caption p {
 footer {
     padding-top: 2rem;
     position: relative;
+    background-color: green;
 }
 
 footer a {
