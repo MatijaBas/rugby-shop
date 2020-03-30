@@ -69,6 +69,18 @@ body {
 }
 
 
+/*--------- Jumbotron --------- */
+
+.jumbotron {
+    background-color: transparent;
+    padding: 0px;
+    margin-top: 50px;
+}
+
+.jumbotron-text {
+    color: #fffdf9;
+}
+
 /*-----images for featured products row-----*/
 
 .bg_images_featured {

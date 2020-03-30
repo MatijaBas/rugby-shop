@@ -4,6 +4,23 @@
 <!-- Page title here -->
 {% block page_title %}Home Page | Rugby Shop{% endblock %}
 
+<!-- Page heading -->
 {% block page_heading %}
-<h1 class="display-4 text-white">Welcome to <br>Rugby Shop</h1>
-	{% endblock %}
+<div class="row">
+	<div class="col-12 text-center">
+		<!-- Page Headline-->
+		<br>
+		<div class="jumbotron text-white">
+			<h1 class="display-4 text-white">Welcome to <br>Rugby Shop</h1>
+				<p class="lead text-white">Check out our wide range of products and find something for yourself!
+				</p>
+				<p>Curious about our products<br>Well, have a look here!</p>
+					<p class="lead">
+						<br>
+						<a class="btn btn-success text-white" href="{% url 'all_products' %}" role="button">Browse
+							products</a>
+					</p>
+		</div>
+	</div>
+</div>
+{% endblock %}
