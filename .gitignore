@@ -5,5 +5,3 @@ __pycache__/
 env.py
 *.png
 .theia/
-media/*
-static/
