@@ -81,7 +81,14 @@ body {
 }
 
 
+/*---------- About Me section ----------------------------------------- */
+ .about_section {
+    padding: 50px 20px;
+} 
 
+.about_me {
+    background-color: #7cc9af;
+}
 
 /*-----images for featured products row-----*/
 

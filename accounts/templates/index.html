@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load staticfiles %} {% load bootstrap_tags %}
 
 <!-- Page title here -->
 {% block page_title %}Home Page | Rugby Shop{% endblock %}
@@ -24,3 +24,34 @@
 	</div>
 </div>
 {% endblock %}
+
+<!-- About Me Content -->
+{% block about_content %}
+<div class="row justify-content-center about_me" id="about">
+	<div class="col-12 col-md-6 about_section">
+		<br>
+		<h2 class="text-center">About Me</h2>
+		<br>
+		<p class="text-center">Rugby Shop was established in 1999 and is the oldest rugby store in Ireland. Following a
+			take over by Staunton Sports in 1998, Elverys Sports have expanded from a single store operation to fifty
+			four stores nationwide. This coming together brought a wealth of experience and in-depth knowledge of the
+			sports retail business that is reflected in our shops today. Today, we employ over 700 hundred people and
+			are proud to be wholly Irish owned.</p>
+	</div>
+
+	<div class="col-12 col-md-6 about_section">
+		<h6 class="text-center">Some of our new collection</h6>
+		<img class="img-fluid" src="{% static 'img/jerseys.jpg' %}" alt="About the owner image">
+    </div>
+	</div>
+	{% endblock %}
+
+
+	{% block featured_products %}
+	<div class="row justify-content-center bg_images_featured">
+		<div class="col-10 col-md-6 text-center content_imgs_featured">
+
+		</div>
+	</div>
+	<!--/.Carousel Wrapper-->
+	{% endblock %}

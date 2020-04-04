@@ -65,7 +65,8 @@
 
 			<ul class="navbar-nav ml-auto">
 				<!-- The nav links that will be there regardless of whether the user is logged in our out -->
-				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-football-ball"></i>About</a></li>
+				<li class="nav-item"><a class="nav-link"
+						href="{% url 'index' %}#about"><i class="fas fa-football-ball"></i>About</a></li>
 				<li class="nav-item"><a class="nav-link"
 						href="{% url 'all_products' %}"><i class="fab fa-shopware"></i>Shop</a></li>
 				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-blog"></i>Blog</a></li>
@@ -120,6 +121,17 @@
 			{% endblock %}
 
 		</div>
+	</div>
+
+	<!-- Second container, with About me and Featured products content -->
+	<div class="container-fluid about_me">
+		<!-- Row for About_me block content -->
+		{% block about_content %}
+		{% endblock %}
+
+		<!-- Row for Featured Products block content -->
+		{% block featured_products %}
+		{% endblock %}
 	</div>
 
 	<footer class="page-footer text-white">
