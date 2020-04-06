@@ -19,7 +19,7 @@ body {
 /*-------Navbar ------------------------------------------------------ */
 
 .navbar {
-    background-color: #e9eea1;
+    background-color: #567f56;
 }
 
 
@@ -178,8 +178,7 @@ caption p {
 /* --------------------Footer------------------------- */
 
 .page-footer {
-  background-color: green;
-  font-size: 1.5rem;
+  font-size: 1 rem;
   padding: 1rem 0;
 }
 
@@ -187,12 +186,12 @@ caption p {
 footer {
     padding-top: 2rem;
     position: relative;
-    background-color: green;
+    background-color: #567f56cb;
 }
 
 footer a {
     text-decoration: none;
-    color: rgb(212, 28, 28);
+    color: rgb(224, 215, 215);
 }
 
 footer a:hover {
@@ -208,10 +207,17 @@ footer a:hover {
     color: #1815b9;
 }
 
-.fa-laptop-code:hover {
+.fa-laptop:hover {
     color: #e54725;
 }
 
+.fa-aws:hover {
+    color: #ec7211;
+}
+
+.fa-youtube:hover {
+    color: red;
+}
 
 .btn-light {
     color: #7a974b;
