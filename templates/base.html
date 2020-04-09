@@ -24,6 +24,9 @@
 	<!-- Customised CSS -->
 	<link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/png" href="static/img/favicon.ico">
+
 	<!-- Checkout JS for Stripe -->
 	{% block head_js %} {% endblock %}
 
@@ -136,38 +139,63 @@
 
 	<footer class="page-footer text-white">
 		<div class="container">
-			<div class="row">
-				<!--Social Media-->
-				<div class="col-md-12 text-center">
-					<div class="mb-1 flex-centre">
-						<a class="ic-gh" href="https://github.com/MatijaBas/rugby-shop" target="_blank"
-							aria-label="Find me on GitHub" rel="noopener">
-							<i class="fab fa-github-square fa-lg mr-md-5 mr-3 fa-2x" title="MatijaBass"></i>
-						</a>
-						<a class="ic-lin" href="https://www.linkedin.com/in/matija-basanovic/" target="_blank"
-							aria-label="LinkedIn - Matija Basanovic" rel="noopener">
-							<i class="fab fa-linkedin fa-lg mr-md-5 mr-3 fa-2x" title="Matija Basanovic"></i>
-						</a>
-						<a class="ic-cod" href="https://codeinstitute.net/" target="_blank"
-							aria-label="Find me on Instagram" rel="noopener">
-							<i class="fa fa-laptop fa-lg mr-md-5 mr-3 fa-2x" title="Codeinstitute"></i>
-						</a>
-						<a class="ic-aws" href="https://aws.amazon.com/" target="_blank" aria-label="AWS by Amazon"
-							rel="noopener">
-							<i class="fab fa-aws fa-lg mr-md-5 mr-3 fa-2x" title="Amazon"></i>
-						</a>
-						<a class="ic-yt" href="https://youtube.com/" target="_blank" aria-label="Youtube videos"
-							rel="noopener">
-							<i class="fab fa-youtube fa-lg mr-md-5 mr-3 fa-2x" title="Youtube"></i>
-						</a>
+			<div class="row top">
+				<div class="col-md-4 text-center mr-auto" style="padding: 15px;">
+					<ul class="list-unstyled footer-list">
+						<li class="links-footer">
+							<a href="{% url 'index' %}#about %}" aria-label="About">About</a>
+						</li>
+						<li class="links-footer">
+							<a href="{% url 'contact' %}" aria-label="Contact">Contact</a>
+						</li>
+						<li class="links-footer">
+							<a href="#" aria-label="Return Policy">Return Policy</a>
+						</li>
+						<li class="links-footer">
+							<a href="#" aria-label="Delivery Information">Delivery Information</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-4 text-center bottom" style="padding: 35px;">
+
+					<a class="ic-gh" href="https://github.com/MatijaBas/rugby-shop" target="_blank"
+						aria-label="Find me on GitHub" rel="noopener">
+						<i class="fab fa-github-square fa-lg mr-md-5 mr-3 fa-2x" title="MatijaBass"></i>
+					</a>
+					<a class="ic-lin" href="https://www.linkedin.com/in/matija-basanovic/" target="_blank"
+						aria-label="LinkedIn - Matija Basanovic" rel="noopener">
+						<i class="fab fa-linkedin fa-lg mr-md-5 mr-3 fa-2x" title="Matija Basanovic"></i>
+					</a>
+					<a class="ic-cod" href="https://codeinstitute.net/" target="_blank"
+						aria-label="Find me on Instagram" rel="noopener">
+						<i class="fa fa-laptop fa-lg mr-md-5 mr-3 fa-2x" title="Codeinstitute"></i>
+					</a>
+					<!-- <a class="ic-aws" href="https://aws.amazon.com/" target="_blank" aria-label="AWS by Amazon"
+						rel="noopener">
+						<i class="fab fa-aws fa-lg mr-md-5 mr-3 fa-2x" title="Amazon"></i>
+					</a> -->
+					<!-- <a class="ic-yt" href="https://youtube.com/" target="_blank" aria-label="Youtube videos"
+						rel="noopener">
+						<i class="fab fa-youtube fa-lg mr-md-5 mr-3 fa-2x" title="Youtube"></i>
+					</a> -->
+				</div>
+				<div class="col-md-4 text-center ml-auto" style="padding: 15px;">
+					<div class="customer-service">
+						<div class="customer-service--phone-number">
+							Customer Service 012345678
+						</div>
+						<div class="customer-service--opening-times">
+							Mon to Fri 08:00 to 20:00 <br>
+                            Sat & Sun 09:00 to 17:00
+                        </div>
+						</div>
 					</div>
 					<!--Copyright-->
-					<div class="text-shadow text-center py-3">
+					<div class="col-12 text-shadow text-center">
 						&#169; 2020 Copyright: Matija Basanovic | Student @ Code Institute
 					</div>
 				</div>
 			</div>
-		</div>
 	</footer>
 
 </body>

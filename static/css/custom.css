@@ -19,7 +19,7 @@ body {
 /*-------Navbar ------------------------------------------------------ */
 
 .navbar {
-    background-color: #567f56;
+    background-color: #7facff;
 }
 
 
@@ -83,11 +83,11 @@ body {
 
 /*---------- About Me section ----------------------------------------- */
  .about_section {
-    padding: 50px 20px;
+    padding: 20px 55px;
 } 
 
 .about_me {
-    background-color: #7cc9af;
+    background-color: #759da7;
 }
 
 /*-----images for featured products row-----*/
@@ -186,7 +186,7 @@ caption p {
 footer {
     padding-top: 2rem;
     position: relative;
-    background-color: #567f56cb;
+    background-color: #7facff;
 }
 
 footer a {
