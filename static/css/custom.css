@@ -19,7 +19,7 @@ body {
 /*-------Navbar ------------------------------------------------------ */
 
 .navbar {
-    background-color: #7facff;
+    background-color: #ec7211;
 }
 
 
@@ -81,19 +81,10 @@ body {
 }
 
 
-/*---------- About Me section ----------------------------------------- */
- .about_section {
-    padding: 20px 55px;
-} 
-
-.about_me {
-    background-color: #759da7;
-}
-
 /*-----images for featured products row-----*/
 
 .bg_images_featured {
-    background-color: #c0e9e2;
+    background-color: #83afd436;
     background-size: cover;
     width: 100%;
     margin: auto;
@@ -101,6 +92,26 @@ body {
     padding: 0px;
 }
 
+/*----column Content for the featured products carousel----*/
+
+.content_imgs_featured {
+    padding: 30px 20px 40px 20px;
+    margin: auto;
+}
+
+.carousel-inner img {
+    margin: auto;
+  } 
+
+/*---------- About Us section ----------------------------------------- */
+ .about_section {
+    padding: 20px 55px;
+} 
+
+.about_me {
+    background-color: #000000;
+    color: aqua;
+}
 
 /*---------- Register and Login forms -----------------------------------*/
 .accountform {
@@ -186,7 +197,7 @@ caption p {
 footer {
     padding-top: 2rem;
     position: relative;
-    background-color: #7facff;
+    background-color: #ec7211;
 }
 
 footer a {

@@ -40,60 +40,56 @@
 	<!-- Fixed navbar, with if statement, depending if user is logged in or out -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-light">
 		<!-- Navbar brand -->
-		<a class="navbar-brand" href="{% url 'index' %}">Rugby Shop</a>
-		<!-- Collapsible button -->
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+		<a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'img/RS90x43.jpg' %}"></a>
+			<!-- Collapsible button -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
             aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-		<!-- Collapsible content -->
-		<div class="collapse navbar-collapse" id="navbar">
-			<!-- Links -->
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="{% url 'index' %}"><i class="fa fa-home"></i>Home
-						<span class="sr-only">(current)</span></a></li>
+			<!-- Collapsible content -->
+			<div class="collapse navbar-collapse" id="navbar">
+				<!-- Links -->
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active"><a class="nav-link"
+							href="{% url 'index' %}"><i class="fa fa-home"></i>Home
+							<span class="sr-only">(current)</span></a></li>
 
-				{% if user.is_authenticated %}
-				<li class="nav-item"><a class="nav-link" href="{% url 'profile' %}"><i class="fa fa-user"></i>
-						Profile</a></li>
-				<li class="nav-item"><a class="nav-link"
-						href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
-				{% else %}
-				<li class="nav-item"><a class="nav-link" href="{% url 'register' %}"><i class="fa fa-user-plus"></i>
-						Register</a></li>
-				<li class="nav-item"><a class="nav-link" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i>Log
-						In</a></li>
-				{% endif %}
-			</ul>
+					{% if user.is_authenticated %}
+					<li class="nav-item"><a class="nav-link" href="{% url 'profile' %}"><i class="fa fa-user"></i>
+							Profile</a></li>
+					<li class="nav-item"><a class="nav-link"
+							href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+					{% else %}
+					<li class="nav-item"><a class="nav-link" href="{% url 'register' %}"><i class="fa fa-user-plus"></i>
+							Register</a></li>
+					<li class="nav-item"><a class="nav-link"
+							href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i>Log
+							In</a></li>
+					{% endif %}
+				</ul>
 
-			<ul class="navbar-nav ml-auto">
-				<!-- The nav links that will be there regardless of whether the user is logged in our out -->
-				<li class="nav-item"><a class="nav-link"
-						href="{% url 'index' %}#about"><i class="fas fa-football-ball"></i>About</a></li>
-				<li class="nav-item"><a class="nav-link"
-						href="{% url 'all_products' %}"><i class="fab fa-shopware"></i>Shop</a></li>
-				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-blog"></i>Blog</a></li>
-				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-comments"></i>Reviews</a></li>
+				<ul class="navbar-nav ml-auto">
+					<!-- The nav links that will be there regardless of whether the user is logged in our out -->
+					<li class="nav-item"><a class="nav-link"
+							href="{% url 'all_products' %}"><i class="fab fa-shopware"></i>Shop</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-blog"></i>Blog</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-comments"></i>Reviews</a></li>
 
-				<!-- This will put a link into the navigation bar,
+					<!-- This will put a link into the navigation bar,
                      so the user can check which items are currently in the shopping cart,
                      and also show if there are any products in it at all, or not. -->
-				<li class="nav-item">
-					<a class="nav-link" href="{% url 'view_cart' %}">
-						<i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart
-						{% if product_count > 0 %}
-						<span class="badge">{{ product_count }}</span>
-						{% endif %}
-					</a>
-				</li>
-				<!-- Link to contact form -->
-				<li class="nav-item">
-					<a class="nav-link" href="{% url 'contact' %}"><i class="fas fa-id-card-alt"></i>Contact</a>
-				</li>
-			</ul>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'view_cart' %}">
+							<i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart
+							{% if product_count > 0 %}
+							<span class="badge">{{ product_count }}</span>
+							{% endif %}
+						</a>
+					</li>
+				</ul>
 
 
-		</div>
+			</div>
 	</nav>
 
 	<!-- First container, with background image -->
@@ -128,13 +124,15 @@
 
 	<!-- Second container, with About me and Featured products content -->
 	<div class="container-fluid about_me">
-		<!-- Row for About_me block content -->
-		{% block about_content %}
-		{% endblock %}
 
 		<!-- Row for Featured Products block content -->
 		{% block featured_products %}
 		{% endblock %}
+
+		<!-- Row for About_me block content -->
+		{% block about_content %}
+		{% endblock %}
+
 	</div>
 
 	<footer class="page-footer text-white">
@@ -142,15 +140,21 @@
 			<div class="row top">
 				<div class="col-md-4 text-center mr-auto" style="padding: 15px;">
 					<ul class="list-unstyled footer-list">
+						<!-- Link for about us -->
 						<li class="links-footer">
-							<a href="{% url 'index' %}#about %}" aria-label="About">About</a>
+							<a href="{% url 'index' %}#about %}"
+								aria-label="About"><i class="fas fa-football-ball"></i>About</a>
 						</li>
+						<!-- Link to contact form -->
 						<li class="links-footer">
-							<a href="{% url 'contact' %}" aria-label="Contact">Contact</a>
+							<a href="{% url 'contact' %}"
+								aria-label="Contact"><i class="fas fa-id-card-alt"></i>Contact</a>
 						</li>
+						<!-- Link for return policy -->
 						<li class="links-footer">
 							<a href="#" aria-label="Return Policy">Return Policy</a>
 						</li>
+						<!-- Link for delivery information -->
 						<li class="links-footer">
 							<a href="#" aria-label="Delivery Information">Delivery Information</a>
 						</li>
