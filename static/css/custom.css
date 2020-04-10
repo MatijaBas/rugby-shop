@@ -22,6 +22,9 @@ body {
     background-color: #ec7211;
 }
 
+.navbar-brand {
+    padding: 0;
+}
 
 /* -------- Label, badge for Cart in Navbar ---------*/
 
@@ -61,7 +64,7 @@ body {
 .jumbotron {
     background-color: transparent;
     padding: 0px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .jumbotron-text {
@@ -119,6 +122,9 @@ body {
     padding-bottom: 30px;
 }
 
+.log-in {
+    margin-top: 3rem;
+}
 
 /*------------Shop page content----------------------------------------- */
 
@@ -187,6 +193,13 @@ caption p {
 
 
 /* --------------------Footer------------------------- */
+
+.navFooterBackToTop {
+    background-color: #ffbc00;
+    color: #fcfefa;
+    text-decoration: none;
+    font-family: inherit;
+}
 
 .page-footer {
   font-size: 1 rem;
