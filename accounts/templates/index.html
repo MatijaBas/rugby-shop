@@ -28,7 +28,7 @@
 <!-- Featured Products carousel -->
 {% block featured_products %}
 <div class="row justify-content-center bg_images_featured">
-	<div class="col-10 col-md-6 text-center content_imgs_featured">
+	<div class="col-12 col-md-6 text-center content_imgs_featured">
 		<br>
 		<h2>New Collections</h2>
 		<br>
@@ -104,9 +104,10 @@
     </div>
 					</div>
 					{% endblock %}
-
-					<div class="navLeftFooter text-center" id="navFooter"><a href="#nav-top" id="navBackToTop">
+					{% block back_content %}
+					<div class="navLeftFooter text-center" id="navFooter"><a href="{% url 'index' %}" id="navBackToTop">
 							<div class="navFooterBackToTop"><span class="navFooterBackToTopText">Back to top</span>
 							</div>
 						</a>
 					</div>
+					{% endblock %}

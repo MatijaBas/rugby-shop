@@ -87,7 +87,7 @@ body {
 /*-----images for featured products row-----*/
 
 .bg_images_featured {
-    background-color: #83afd436;
+    background-color: #423d2fbd;
     background-size: cover;
     width: 100%;
     margin: auto;
@@ -195,8 +195,8 @@ caption p {
 /* --------------------Footer------------------------- */
 
 .navFooterBackToTop {
-    background-color: #ffbc00;
-    color: #fcfefa;
+    background-color: #ede4e2;
+    color: #080807;
     text-decoration: none;
     font-family: inherit;
 }
