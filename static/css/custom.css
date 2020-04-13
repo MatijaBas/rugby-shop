@@ -112,7 +112,6 @@ body {
 } 
 
 .about_me {
-    background-color: #000000;
     color: aqua;
 }
 
@@ -191,7 +190,24 @@ caption p {
     margin-bottom: 15px;
 }
 
+/*---------- Subscription Form ----------------------------------------------*/
 
+.newsletter-row {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+}
+.newsletter-form {
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
 /* --------------------Footer------------------------- */
 
 .navFooterBackToTop {

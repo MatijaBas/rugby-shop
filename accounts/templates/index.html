@@ -46,17 +46,17 @@
 				<!--First slide-->
 				<div class="carousel-item active">
 					<img class="d-block w-50" src="{% static 'img/new-balls1.jpg' %}" alt="First slide">
-        </div>
+             </div>
 					<!--/First slide-->
 					<!--Second slide-->
 					<div class="carousel-item">
 						<img class="d-block w-50" src="{% static 'img/new-footwear1.jpg' %}" alt="Second slide">
-        </div>
+                 </div>
 						<!--/Second slide-->
 						<!--Third slide-->
 						<div class="carousel-item">
 							<img class="d-block w-50" src="{% static 'img/newjersey1.jpg' %}" alt="Third slide">
-        </div>
+                </div>
 							<!--/Third slide-->
 						</div>
 						<!--/.Slides-->
@@ -95,19 +95,37 @@
 							are proud to be wholly Irish owned.<br>
                             We cater for both the casual sporting community and top sports athletes. Our business has been built on a high level of customer service, quality sports goods, reliability and above all instilling confidence in the public that Rugby Shop is the retail store for those interested in sport.<br>
                             As well as stocking the top brand names in sportswear, Rugby Shop also offer a vast range of own brand clothing, accessories and equipment, offering customers great value and top quality.
-                         </p>
+                 </p>
 					</div>
 
 					<div class="col-12 col-md-6 about_section">
 						<h6 class="text-center">This is how we start</h6>
 						<img class="img-fluid" src="{% static 'img/Opening_photo.jpg' %}" alt="About the owner image">
-    </div>
+             </div>
 					</div>
 					{% endblock %}
 					{% block back_content %}
-					<div class="navLeftFooter text-center" id="navFooter"><a href="{% url 'index' %}" id="navBackToTop">
-							<div class="navFooterBackToTop"><span class="navFooterBackToTopText">Back to top</span>
-							</div>
-						</a>
-					</div>
-					{% endblock %}
+
+				</div>
+				<div class="navLeftFooter text-center" id="navFooter">
+					<a href="{% url 'index' %}" id="navBackToTop">
+						<div class="navFooterBackToTop"><span class="navFooterBackToTopText">Back to top</span>
+						</div>
+					</a>
+				</div>
+				<section class="newsletter-row">
+					<h3 class="text-center">JOIN US FOR EXCLUSIVE OFFERS!</h3>
+					<p class="text-center">By signing up you are confirming that you have read, understood and accept
+						our Privacy
+						Policy
+					</p>
+
+					<form class="newsletter-form text-center" novalidate="novalidate" method="post"
+						id="newsletter-validate-detail">
+						{% csrf_token %}
+						<input name="email" type="email" id="newsletter" class="newsletter-input" placeholder="Enter your email address" data-validate="{required:true, 'validate-email':true}">
+						<button class="btn-success" title="Subscribe" type="submit"><span class="text-uppercase">Subscribe</span></button>
+						<div class="message"><span class="loading-message"></span></div>
+					</form>
+				</section>
+				{% endblock %}
