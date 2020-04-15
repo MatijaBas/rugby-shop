@@ -27,8 +27,9 @@
 	</div>
 	<div class="col-10 col-md-4 text-center bg-light rounded mb-3">
 		<br>
+		<p class="text-dark lead">Your order history</p>
 		{% for order in user.orders.all %}
-        {{ order.date }}
+		{{ order.date }}
 		<br>
         {% endfor %}
 	</div>
