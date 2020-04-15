@@ -25,5 +25,12 @@
 		</p>
 		<a class="btn btn-success text-white mt-3 mb-3" href="{% url 'all_products' %}" role="button">Go to Shop</a>
 	</div>
-</div>
-{% endblock %}
+	<div class="col-10 col-md-4 text-center bg-light rounded mb-3">
+		<br>
+		{% for order in user.orders.all %}
+        {{ order.date }}
+		<br>
+        {% endfor %}
+	</div>
+	</div>
+	{% endblock %}

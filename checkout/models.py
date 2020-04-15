@@ -1,6 +1,6 @@
 from django.db import models
 from products.models import Product
-
+from django.contrib.auth.models import User
 # Create your models here.
 
 
@@ -10,6 +10,8 @@ class Order(models.Model):
     and return a summary of the users order with the id, date and name.
     """
 
+    user = models.ForeignKey(
+        User, related_name="orders", on_delete=models.CASCADE)
     full_name = models.CharField(max_length=54, blank=False)
     phone_number = models.CharField(max_length=20, blank=False)
     country = models.CharField(max_length=42, blank=False)
