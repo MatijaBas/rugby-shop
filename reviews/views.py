@@ -6,4 +6,4 @@ from .models import Review
 
 def get_reviews(request):
     reviews = Review.objects.all()
-    return render(request, "reviews.html", {'reviews': reviews})
+    return render(request, "review.html", {'reviews': reviews})
