@@ -1,7 +1,7 @@
 *.sqlite3
 *.pyc
 __pycache__/
-.theia/
+.theia/*
 env.py
 *.png
-media/*
+media/
