@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends "base.html" %} {% load bootstrap_tags %}
+
+<!-- Page title here -->
+{% block page_title %}Add review | Rugby Shop{% endblock %}
+
+<!-- Page heading here -->
+{% block page_heading %}
+<div class="row justify-content-center">
+	<div class="col-12 col-md-6">
+		<!-- Page Headline, so the user knows which page they are on -->
+		<br>
+		<h2 class="text-light text-center">Share your experience</h2>
+	</div>
+</div>
+{% endblock %}
+
+<!-- The Add review form -->
+{% block content %}
+<div class="row justify-content-center">
+	<div class="col-lg-8 mb-5">
+		<form class="text-light" method="POST" enctype="multipart/form-data">
+			{% csrf_token %} {{ form | as_bootstrap }}
+			<button type="submit" class="btn btn-info rounded-1">Add Review</button>
+		</form>
+	</div>
+</div>
+{% endblock %}

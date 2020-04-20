@@ -24,6 +24,8 @@ from checkout import urls as urls_checkout
 from products.views import all_products
 from home import urls as urls_home
 from home.views import contact
+from review import urls as urls_review
+from review.views import get_review
 from django.views import static
 from .settings import MEDIA_ROOT
 
@@ -35,6 +37,9 @@ urlpatterns = [
     url(r'^products/', all_products, name='all_products'),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
+    url(r'^review/', include('review.urls')),
+    url(r'^review/', include(urls_review)),
+    url(r"^review$", get_review, name="get_review"),
     url(r'^search/', include(urls_search)),
     url(r'^home/', include(urls_home)),
     url(r'^contact/', contact, name='contact'),

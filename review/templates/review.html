@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% extends 'base.html' %} {% load bootstrap_tags %}
+
+<!-- Page title here -->
+{% block page_title %}Review | Rugby Shop{% endblock %}
+
+<!-- Page heading here -->
+{% block page_heading %}
+<div class="row justify-content-center">
+	<div class="col-12">
+		<!-- Page Headline, so the user knows which page they are on -->
+		<br>
+		<h2 class="text-white text-center">Products Reviews</h2>
+	</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="col-md-12">
+		<!-- Title section so the users knows what to expect on this page -->
+		<h3 class="text-center text-light">Share your experience</h3>
+		<p class="text-light text-center mx-auto w-75">If you have positive or negative feedback, please let us know so
+			we can improve our service. Thank you</p>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-12">
+
+		<!-- Here the user can see the shared Reviews and the buttons for viewing and editing posts -->
+		{% for review in reviews %}
+		<div class="card mb-3 w-75 mx-auto">
+			<h5 class="card-header">Feedback</h5>
+			<div class="card-body">
+				<h5 class="card-title text-center">{{ review.title }}</h5>
+				<p class="card-text text-center">{{ review.content }}</p>
+				<div class="card-footer text-muted">{{ review.published_date }}</div>
+				<a href="{% url 'edit_review' review.id %}" class="btn btn-sm btn-info">Edit Review</a>
+				<a href="{% url 'review_content' review.id %}" class="btn btn-sm btn-info">View Review</a>
+			</div>
+		</div>
+		{% endfor %}
+
+
+	</div>
+</div>
+
+<!-- Button for the user to be able to Add Review-->
+<div class="row justify-content-center">
+	<div class="col-12 text-center d-block">
+		<!-- Button to add review  -->
+		<a href="{% url 'add_review' %}" class="btn btn-info rounded-1 btn-md justify-content-center mb-3">Add Your
+			Review</a>
+	</div>
+</div>
+
+{% endblock %}

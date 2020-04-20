@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+<!-- Page title here -->
+{% block page_title %}View Review | Rugby Shop{% endblock %}
+
+<!-- Page heading here -->
+{% block page_heading %}
+<div class="row justify-content-center">
+	<div class="col-12 col-md-6">
+		<!-- Page Headline, so the user knows which page they are on -->
+		<br>
+		<h2 class="text-light text-center">View Review</h2>
+	</div>
+</div>
+{% endblock %}
+
+<!--View the content in the Review post, and choose between the buttons to go back to the Review page or to Edit the review post-->
+{% block content %}
+<div class="row justify-content-center text-dark bg-light ml-3 mr-3 mb-4    rounded">
+	<div class="col-lg-8 mb-5">
+		<h3 class="text-center mt-3 mb-3">{{ review.title }}</h3>
+		<div class="row justify-content-center bg-light text-dark ml-1 mr-1">
+			<div class="col-lg-8 mb-5 mt-3 text-dark text-center">
+				<p>{{ review.content }}</p>
+				<a href="{% url 'get_review' %}" class="btn btn-info mb-3">Back to Review Page</a>
+				<a href="{% url 'edit_review' review.id %}" class="btn btn-info mb-3">Edit Review</a>
+				<hr>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
