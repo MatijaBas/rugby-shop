@@ -34,10 +34,22 @@
 		<div class="card mb-3 w-75 mx-auto">
 			<h5 class="card-header">Feedback</h5>
 			<div class="card-body">
+				<h5 class="card-title text-center">Excellent Customer service</h5>
+				<p class="card-text text-center">Well - BRILLIANT customer service. full kudos to Ben who served me. He
+					juggled extremely well both my self and another Customer, not my Friend.<br>
+                Also, Paraskeva who gave my Friend her absolutely undivided attention to answering his queries and going to the stands to get the product he wanted, despite the pressure of a queue of customers waiting to pay at the cash register where she was the only cashier.</p>
+					<div class="card-footer text-muted">April 15, 2020, 6:17 p.m.</div>
+					<!-- <a href="{% url 'edit_review' review.id %}" class="btn btn-sm btn-info">Edit Review</a> -->
+					<a href="{% url 'review_content' review.id %}" class="btn btn-sm btn-info">View Review</a>
+			</div>
+		</div>
+
+		<div class="card mb-3 w-75 mx-auto">
+			<h5 class="card-header">Feedback</h5>
+			<div class="card-body">
 				<h5 class="card-title text-center">{{ review.title }}</h5>
 				<p class="card-text text-center">{{ review.content }}</p>
 				<div class="card-footer text-muted">{{ review.published_date }}</div>
-				<a href="{% url 'edit_review' review.id %}" class="btn btn-sm btn-info">Edit Review</a>
 				<a href="{% url 'review_content' review.id %}" class="btn btn-sm btn-info">View Review</a>
 			</div>
 		</div>
