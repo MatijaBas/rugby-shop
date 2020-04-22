@@ -17,7 +17,7 @@
 				<p>Curious about our products<br>Well, have a look here!</p>
 					<p class="lead">
 						<br>
-						<a class="btn btn-success text-white" href="{% url 'all_products' %}" role="button">Browse
+						<a class="btn btn-info text-white" href="{% url 'all_products' %}" role="button">Browse
 							products</a>
 					</p>
 		</div>
@@ -104,28 +104,32 @@
              </div>
 					</div>
 					{% endblock %}
-					{% block back_content %}
+
 
 				</div>
+				{% block back_content %}
 				<div class="navLeftFooter text-center" id="navFooter">
 					<a href="{% url 'index' %}" id="navBackToTop">
 						<div class="navFooterBackToTop"><span class="navFooterBackToTopText">Back to top</span>
 						</div>
 					</a>
 				</div>
-				<section class="newsletter-row">
-					<h3 class="text-center">JOIN US FOR EXCLUSIVE OFFERS!</h3>
-					<p class="text-center">By signing up you are confirming that you have read, understood and accept
-						our Privacy
-						Policy
-					</p>
+				<div class="container subscribe">
+					<section class="newsletter-row">
+						<h3 class="text-center" style="margin-top: 15px;">JOIN US FOR EXCLUSIVE OFFERS!</h3>
+						<p class="text-center">By signing up you are confirming that you have read, understood and
+							accept
+							our Privacy
+							Policy
+						</p>
 
-					<form class="newsletter-form text-center" novalidate="novalidate" method="post"
-						id="newsletter-validate-detail">
-						{% csrf_token %}
-						<input name="email" type="email" id="newsletter" class="newsletter-input" placeholder="Enter your email address" data-validate="{required:true, 'validate-email':true}">
-						<button class="btn-success" title="Subscribe" type="submit"><span class="text-uppercase">Subscribe</span></button>
-						<div class="message"><span class="loading-message"></span></div>
-					</form>
-				</section>
+						<form class="newsletter-form text-center" novalidate="novalidate" method="post"
+							id="newsletter-validate-detail">
+							{% csrf_token %}
+							<input name="email" type="email" id="newsletter" class="newsletter-input" placeholder="Enter your email address" data-validate="{required:true, 'validate-email':true}">
+							<button class="btn-info" title="Subscribe" type="submit"><span class="text-uppercase">Subscribe</span></button>
+							<div class="message"><span class="loading-message"></span></div>
+						</form>
+					</section>
+				</div>
 				{% endblock %}
