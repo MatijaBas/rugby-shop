@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 
 {% extends 'base.html' %}
+
+<!-- Page title here -->
+{% block page_title %}Terms&Condition Page | Rugby Shop{% endblock %}
+
 {% block content %}
 
-<div class="container main content">
-	<div class="shopify-policy__container">
+<div class="container main content" style="background-color: rgba(0, 0, 0, 0.4);">
+	<div class="shopify-policy__container text-center text-light">
 		<div class="shopify-policy__title">
 			<h1>Terms of service</h1>
 		</div>
@@ -63,7 +67,7 @@
 			<br> <br> <strong>SECTION 19 - CHANGES TO TERMS OF SERVICE</strong> <br> You can review the most current version of the Terms of Service at any time at this page.
 			<br> We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.
 			<br> <br> <strong>SECTION 20 - CONTACT INFORMATION</strong> <br> Questions about the Terms of Service please
-			<strong><a href="https://world-rugby-shop.myshopify.com/pages/contact-us" title="Contact Us">click here</a></strong>
+			<strong><a href="{% url 'contact' %}" title="Contact Us">click here</a></strong>
 			to contact us.</div>
 	</div>
 </div>

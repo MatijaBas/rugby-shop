@@ -91,6 +91,10 @@ def delivery(request):
     return render(request, "delivery.html")
 
 
+def terms_conditions(request):
+    return render(request, "terms-conditions.html")
+
+
 def subscribe_mail(request, mail):
     messages.success(request, "Thank You For Subscription")
     return redirect(reverse("index"))
