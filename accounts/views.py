@@ -81,3 +81,12 @@ def register(request):
     else:
         registration_form = UserRegistrationForm()
     return render(request, 'register.html', {"registration_form": registration_form})
+
+
+def return_policy(request):
+    return render(request, "return-policy.html")
+
+
+def subscribe_mail(request, mail):
+    messages.success(request, "Thank You For Subscription")
+    return redirect(reverse("index"))

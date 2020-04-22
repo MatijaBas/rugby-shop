@@ -190,6 +190,14 @@ caption p {
     margin-bottom: 15px;
 }
 
+/*---------- Return Policy ----------------------------------------------*/
+
+.policy-wrapper {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
 /*---------- Subscription Form ----------------------------------------------*/
 
 .subscribe {
@@ -303,3 +311,4 @@ footer a:hover {
     border-radius: 9px;
     width: 287px;
 }
+
