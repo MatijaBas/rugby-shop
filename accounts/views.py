@@ -87,6 +87,10 @@ def return_policy(request):
     return render(request, "return-policy.html")
 
 
+def delivery(request):
+    return render(request, "delivery.html")
+
+
 def subscribe_mail(request, mail):
     messages.success(request, "Thank You For Subscription")
     return redirect(reverse("index"))
