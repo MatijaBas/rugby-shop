@@ -239,6 +239,14 @@ footer a:hover {
     color: white;
 }
 
+.fa-facebook-square:hover {
+    color: #3b5998;
+}
+
+.fa-instagram:hover {
+    color:  #833AB4;
+}
+
 .fa-github-square:hover {
     color: 	#000000;
 }
