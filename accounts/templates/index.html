@@ -78,18 +78,18 @@
 
 				<!-- About Me Content -->
 				{% block about_content %}
-				<div class="navLeftFooter text-center" id="navFooter">
-					<a href="{% url 'index' %}" id="navBackToTop">
-						<div class="navFooterBackToTop"><span class="navFooterBackToTopText">Back to top</span>
+				<div class="navLeftFooter text-center" id="nav-Footer">
+					<a href="#" id="navBack-ToTop">
+						<div class="navFooterBackToTop"><span class="navFooterBackToTopText"></span>
 						</div>
 					</a>
 				</div>
 				<div class="row justify-content-center about_me" id="about">
-					<div class="col-12 col-md-6 about_section">
+					<div class="col-12 about_section">
 						<br>
 						<h2 class="text-center">About Us</h2>
 						<br>
-						<p class="text-center" style="margin-top: 2rem;">Rugby Shop was established in 1999 and is the
+						<p class="text-center" style="margin-top: 1rem;">Rugby Shop was established in 1999 and is the
 							oldest rugby
 							store in Ireland. Following a
 							take over by Staunton Sports in 1998, Rugby Shop have expanded from a single store operation
@@ -101,41 +101,61 @@
 							are proud to be wholly Irish owned.<br>
                             We cater for both the casual sporting community and top sports athletes. Our business has been built on a high level of customer service, quality sports goods, reliability and above all instilling confidence in the public that Rugby Shop is the retail store for those interested in sport.<br>
                             As well as stocking the top brand names in sportswear, Rugby Shop also offer a vast range of own brand clothing, accessories and equipment, offering customers great value and top quality.
-                 </p>
+                        </p>
+							<p>We aspire to be a leading sports and lifestyle retailer internationally and to deliver
+								sustainable growth for our shareholders in the medium to long term by offering our
+								customers an unrivalled range of high quality leading brands.</p>
+							<p>The Group’s strategy is to invest in our people and our key third party brand partners in
+								order to elevate our retail proposition to attain new levels of excellence across our
+								multi-brand, multi-channel offering to customer</p>
+							<p>The Group provides a full multi-channel retail approach across its fascias in the UK, and
+								increasingly across its fascias in continental Europe and elsewhere. The Group also
+								wholesales and licenses its Group Brands to partners in the UK, continental Europe, the
+								Americas, and the Far East.</p>
 					</div>
-
-					<div class="col-12 col-md-6 about_section">
-						<h6 class="text-center">This is how we start</h6>
-						<img class="img-fluid" src="{% static 'img/Opening_photo.jpg' %}" alt="About the owner image">
-             </div>
-					</div>
-					{% endblock %}
-
-
 				</div>
-				{% block back_content %}
-				<div class="navLeftFooter text-center" id="navFooter">
-					<a href="{% url 'index' %}" id="navBackToTop">
-						<div class="navFooterBackToTop"><span class="navFooterBackToTopText">Back to top</span>
+				<div class="row justify-content-center about_me" id="about-img">
+					<div class="col-12 about_section text-center">
+						<h5 class="text-center">This is how we start</h5>
+						<div class="row">
+							<div class="col">
+								<img class="img-fluid" src="{% static 'img/Opening_photo.jpg' %}" alt="About the owner image">
+							</div>
+								<div class="col">
+									<img class="img-fluid" src="{% static 'img/opening2.jpg' %}" alt="About the owner image">
+							</div>
+									<div class="col">
+										<img class="img-fluid" src="{% static 'img/Opening3.jpg' %}" alt="About the owner image">
+							</div>
+									</div>
+								</div>
+							</div>
+							{% endblock %}
 						</div>
-					</a>
-				</div>
-				<div class="container subscribe">
-					<section class="newsletter-row">
-						<h3 class="text-center" style="margin-top: 15px;">JOIN US FOR EXCLUSIVE OFFERS!</h3>
-						<p class="text-center">By signing up you are confirming that you have read, understood and
-							accept
-							our Privacy
-							Policy
-						</p>
+						{% block back_content %}
+						<div class="navLeftFooter text-center" id="navFooter">
+							<a href="{% url 'index' %}" id="navBackToTop">
+								<div class="navFooterBackToTop"><span class="navFooterBackToTopText">Back to top</span>
+								</div>
+							</a>
+						</div>
+						<div class="container subscribe">
+							<section class="newsletter-row">
+								<h3 class="text-center" style="margin-top: 15px;">JOIN US FOR EXCLUSIVE OFFERS!</h3>
+								<p class="text-center">By signing up you are confirming that you have read, understood
+									and
+									accept
+									our Privacy
+									Policy
+								</p>
 
-						<form class="newsletter-form text-center" novalidate="novalidate" method="post"
-							id="newsletter-validate-detail">
-							{% csrf_token %}
-							<input name="email" type="email" id="newsletter" class="newsletter-input" placeholder="Enter your email address" data-validate="{required:true, 'validate-email':true}">
-							<button class="btn-info" title="Subscribe" type="submit"><span class="text-uppercase">Subscribe</span></button>
-							<div class="message"><span class="loading-message"></span></div>
-						</form>
-					</section>
-				</div>
-				{% endblock %}
+								<form class="newsletter-form text-center" novalidate="novalidate" method="post"
+									id="newsletter-validate-detail">
+									{% csrf_token %}
+									<input name="email" type="email" id="newsletter" class="newsletter-input" placeholder="Enter your email address" data-validate="{required:true, 'validate-email':true}">
+									<button class="btn-info" title="Subscribe" type="submit"><span class="text-uppercase">Subscribe</span></button>
+									<div class="message"><span class="loading-message"></span></div>
+								</form>
+							</section>
+						</div>
+						{% endblock %}

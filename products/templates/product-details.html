@@ -18,12 +18,14 @@
 			<div class="row text-center col-12">
 				<div class="col-6">
 					<p class="product-full-description">{{ product.description }}</p>
-					<h4 class="price">Price: <span> <i class="fas fa-euro-sign"></i> {{ product.price }}</span></h4>
-					<h6>Was<strike>€85.00</strike></h6>
 				</div>
 				<div class="col-6 text-center">
 					<div class="col-12 text-center">
-						<label for="category">Choose A Size</label>
+						<h4 class="price">Price: <span> <i class="fas fa-euro-sign"></i> {{ product.price }}</span></h4>
+						<h6>Was<strike>€85.00</strike></h6>
+					</div>
+					<div class="col-12 text-center">
+						<label for="category"><p class="font-weight-bold">Choose A Size</p></label>
 
 						<select id="sizes" name="jersey-size" class="custom-select">
                             <option disabled selected>Select a Size</option>
@@ -44,7 +46,7 @@
 									<input name="quantity" type="number" min="1" max="{{ product.quantity }}" class="quantity-input" value="{{ request.session.cart }}" placeholder="Qty" aria-label="quantity">
                                 </div>
 									<div class="col-12 buttons-wrapper m-3">
-										<button class="btn btn-success add-btn" type="submit">Add</button>
+										<button class="btn btn-success add-btn" type="submit">Add to Cart</button>
 									</div>
 							</form>
 						</div>
@@ -52,8 +54,8 @@
 				</div>
 				<div class="row text-center col-12 m-4">
 					<div class="col-6">
-						<a href="{% url 'all_products' %}" class="btn-info btn btn-default" role="button"><span>Back
-								Shoppping</span></a>
+						<a href="{% url 'all_products' %}" class="btn-info btn btn-default" role="button"><span>Back To
+								Shop</span></a>
 					</div>
 					<div class="col-6"><a href="{% url 'checkout' %}" class="btn-info btn btn-default"
 							role="button"><span>Checkout</span></a>

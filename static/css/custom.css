@@ -106,6 +106,10 @@ body {
     margin: auto;
   } 
 
+.carousel-indicators {
+    position: relative;
+}
+
 /*---------- About Us section ----------------------------------------- */
  .about_section {
     padding: 20px 55px;
@@ -142,7 +146,11 @@ caption p {
     flex-wrap: wrap;
     margin: 15px;
     align-content: center;
-    height: 60%;
+    /* height: 60%; */
+}
+
+.product-post {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .panel-default {
@@ -185,6 +193,7 @@ caption p {
 
 .product-header {
     color: #060707;
+    margin: 20px;
 }
 
 .product-header a:hover {
@@ -312,7 +321,7 @@ footer a:hover {
     color: #fff;
     background-color: #28a745;
     border-color: #28a745;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
 }
 
 .btn-info {
