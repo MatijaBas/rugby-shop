@@ -183,6 +183,17 @@ caption p {
     min-height: 40px;
 }
 
+.product-header {
+    color: #060707;
+}
+
+.product-header a:hover {
+    text-decoration: none;
+}
+
+.products_card a:hover {
+    text-decoration: none;
+}
 
 /*---------- Contact form ----------------------------------------------*/
 

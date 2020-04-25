@@ -12,3 +12,8 @@ and will be viewed on the products.html page.
 def all_products(request):
     products = Product.objects.all()
     return render(request, "products.html", {"products": products})
+
+
+def product_details(request, id):
+    product = Product.objects.get(id=id)
+    return render(request, "product-details.html", {"product": product})
