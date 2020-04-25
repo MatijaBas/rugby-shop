@@ -50,13 +50,14 @@
 						</div>
 					</div>
 				</div>
-				<div class="row text-center col-12">
+				<div class="row text-center col-12 m-4">
 					<div class="col-6">
-						<p class="product-full-description">{{ product.description }}</p>
-						<h4 class="price">Price:
-							<span> <i class="fas fa-euro-sign"></i> {{ product.price }}</span></h4>
+						<a href="{% url 'all_products' %}" class="btn-info btn btn-default" role="button"><span>Back
+								Shoppping</span></a>
 					</div>
-					<div class="col-6">.col-6</div>
+					<div class="col-6"><a href="{% url 'checkout' %}" class="btn-info btn btn-default"
+							role="button"><span>Checkout</span></a>
+					</div>
 				</div>
 			</div>
 		</div>

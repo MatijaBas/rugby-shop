@@ -308,6 +308,13 @@ footer a:hover {
     border-color: #212529;
 }
 
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    letter-spacing: 3px;
+}
+
 .btn-info {
     letter-spacing: 3px;
     color: #fff;
