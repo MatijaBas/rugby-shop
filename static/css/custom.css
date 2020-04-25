@@ -151,6 +151,7 @@ caption p {
 
 .product-post {
     background-color: rgba(0, 0, 0, 0.4);
+    padding-bottom: 46px;
 }
 
 .panel-default {
@@ -182,6 +183,10 @@ caption p {
     padding: 10px;
 }
 
+.input-group {
+        margin-top: 10px;
+}
+
 .products_heading {
     padding-top: 70px;
 }
@@ -196,12 +201,12 @@ caption p {
     margin: 20px;
 }
 
-.product-header a:hover {
+/* .product-header a:hover {
     text-decoration: none;
 }
 
 .products_card a:hover {
-    text-decoration: none;
+    text-decoration: none; */
 }
 
 /*---------- Contact form ----------------------------------------------*/
