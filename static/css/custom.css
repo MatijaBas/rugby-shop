@@ -162,6 +162,10 @@ caption p {
     margin-bottom: 30px;
 }
 
+.panel_default {
+    margin-bottom: 30px;
+}
+
 
 /* The product image */
 .product {
