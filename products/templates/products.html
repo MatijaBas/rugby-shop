@@ -47,7 +47,9 @@
 				<h3 class="product-header">{{ product.name }}</h3>
 			</a>
 			<p class="product-description">{{ product.description |truncatewords:10 }}</p>
-			<p>{{ product.price }}<i class="fas fa-euro-sign"></i></p>
+			<p>{{ product.price }}<i class="fas fa-euro-sign"></i>
+				<h6>Was<strike>{{ product.old_price }}</strike><i class="fas fa-euro-sign"></i></h6>
+			</p>
 			<form method="post" action="{% url 'add_to_cart' product.id %}">
 				{% csrf_token %}
 				<div class="input-group">
@@ -57,11 +59,6 @@
                     </span>
 				</div>
 			</form>
-			<!-- <div class="card-product-info d-flex justify-content-center">
-				<button type="button" class="btn btn-outline-dark"
-								onclick="#">View
-								More</button>
-			</div> -->
 		</div>
 	</div>
 	{% endfor %}

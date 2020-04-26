@@ -9,6 +9,7 @@ class Product(models.Model):
     name = models.CharField(max_length=250, default='')
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    old_price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(upload_to='images')
 
 # What will be returned here is a string with the name.
