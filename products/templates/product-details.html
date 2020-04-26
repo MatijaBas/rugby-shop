@@ -11,15 +11,16 @@
 	<div class="card pages-row">
 		<div class="preview text-center">
 			<div class="preview-pic tab-content col-12">
-				<div class="tab-pane active" id="pic-1"><img src="{{ MEDIA_URL }}{{ product.image }}" /></div>
+				<div class="tab-pane active" id="pic-1">
+					<img src="{{ MEDIA_URL }}{{ product.image }}" class="img-fluid" /></div>
 					<h3 class="product-header">{{ product }}</h3>
 				</div>
 			</div>
 			<div class="row text-center col-12">
-				<div class="col-6">
+				<div class="col-lg-6 col-sm-12">
 					<p class="product-full-description">{{ product.description }}</p>
 				</div>
-				<div class="col-6 text-center">
+				<div class="col-lg-6 col-sm-12 text-center">
 					<div class="col-12 text-center">
 						<h4 class="price">Price: <span> <i class="fas fa-euro-sign"></i> {{ product.price }}</span></h4>
 						<h6>Was<strike>€85.00</strike></h6>
@@ -38,11 +39,11 @@
                             <option value="Size XXXL">Size XXXL</option>
                         </select>
 					</div>
-					<div class="col-12">
+					<div class="col-12 text-center">
 						<div class="action">
 							<form method="post" action="{% url 'add_to_cart' product.id %}" data-add-basket-form>
 								{% csrf_token %}
-								<div class="col-12 m-3">
+								<div class="col-12 mt-3" style="padding: 0px;">
 									<input name="quantity" type="number" min="1" max="{{ product.quantity }}" class="quantity-input" value="{{ request.session.cart }}" placeholder="Qty" aria-label="quantity">
                                 </div>
 									<div class="col-12 buttons-wrapper m-3">
