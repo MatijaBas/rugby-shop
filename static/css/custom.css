@@ -166,8 +166,7 @@ caption p {
     margin-bottom: 35px;
 }
 
-
-/* The product image */
+/*----------------------- The product image -----------------------*/
 .product {
     background-size: cover;
     background-position: center;
@@ -175,7 +174,12 @@ caption p {
     width: 200px;
     height: 200px;
     margin: auto;
+    transition: transform .2s;
 }
+.product:hover {
+    transform: scale(1.5);
+}
+
 
 .products_card {
     border: 1px solid #ddd;
