@@ -110,6 +110,10 @@ body {
     position: relative;
 }
 
+.carousel-item img {
+    width: 100%;
+}
+
 /*---------- About Us section ----------------------------------------- */
  .about_section {
     padding: 20px 55px;
@@ -235,7 +239,7 @@ caption p {
 
 /*---------- Subscription Form ----------------------------------------------*/
 
-.signup-wrapper {
+/* .signup-wrapper {
     background-color: #f5f5f5;
     color: #00000080;
 }
@@ -274,10 +278,10 @@ caption p {
     padding-top: 0;
     line-height: 37px;
     overflow: hidden;
-}
+} */
 
 
-/* .subscribe {
+.subscribe {
     color: #171732;
     background: #fff7f0;
     margin-top: 5px;
@@ -300,7 +304,7 @@ caption p {
     margin-top: 2.25rem;
     margin-left: 0 !important;
     width: 260px !important;
-} */
+}
 
 /* --------------------Footer------------------------- */
 
