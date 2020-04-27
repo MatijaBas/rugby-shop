@@ -116,7 +116,8 @@ body {
 } 
 
 .about_me {
-    color: aqua;
+    color: darkgreen;
+    background-color: wheat;
 }
 
 /*---------- Register and Login forms -----------------------------------*/
@@ -234,7 +235,49 @@ caption p {
 
 /*---------- Subscription Form ----------------------------------------------*/
 
-.subscribe {
+.signup-wrapper {
+    background-color: #f5f5f5;
+    color: #00000080;
+}
+
+.signup-wrapper .signupInner {
+    float: none;
+    border: none;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.signup-email {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.signbut {
+    background-color: #000;
+    color: whitesmoke;
+    font-size: 1.2em;
+    height: 37px;
+    letter-spacing: .1em;
+    padding: 5px;
+}
+
+.disclaimerText {
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+.signup-wrapper .signupInner .join-us-text {
+    text-align: right;
+    width: 20%;
+    padding-top: 0;
+    line-height: 37px;
+    overflow: hidden;
+}
+
+
+/* .subscribe {
     color: #171732;
     background: #fff7f0;
     margin-top: 5px;
@@ -257,7 +300,7 @@ caption p {
     margin-top: 2.25rem;
     margin-left: 0 !important;
     width: 260px !important;
-}
+} */
 
 /* --------------------Footer------------------------- */
 

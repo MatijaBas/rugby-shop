@@ -14,6 +14,7 @@ class Review(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(
         blank=True, null=True, default=timezone.now)
+    added_by = models.CharField(max_length=20, default='Emma')
 
     def __unicode__(self):
         return self.title

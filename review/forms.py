@@ -6,4 +6,4 @@ class ReviewSharingForm(forms.ModelForm):
 
     class Meta:
         model = Review
-        fields = ('title', 'content', 'published_date')
+        fields = ('title', 'content', 'published_date', 'added_by')

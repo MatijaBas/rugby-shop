@@ -37,6 +37,7 @@ def create_or_edit_review(request, pk=None):
                 review.title = form.cleaned_data.get('title')
                 review.content = form.cleaned_data.get('content')
                 review.published_date = form.cleaned_data.get('published_date')
+                review.added_by = form.cleaned_data.get('added_by')
                 review.save()
                 return render(request, 'review.html', {'reviews': reviews})
             else:
