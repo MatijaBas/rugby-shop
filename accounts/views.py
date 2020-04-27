@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, HttpResponseRedirect
 from django.contrib import messages, auth
 from accounts.forms import UserLoginForm, UserRegistrationForm
+from accounts.mails import send_contact_mail
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -51,6 +52,11 @@ def login(request):
     return render(request, 'login.html', args)
 
 
+def subscribe_mail(request, mail):
+    messages.success(request, "Thank You For Subscription")
+    return redirect(reverse("index.html"))
+
+
 @login_required
 def profile(request):
     """A view to display the profile page of a logged in user"""
@@ -93,8 +99,3 @@ def delivery(request):
 
 def terms_conditions(request):
     return render(request, "terms-conditions.html")
-
-
-def subscribe_mail(request, mail):
-    messages.success(request, "Thank You For Subscription")
-    return redirect(reverse("index"))
