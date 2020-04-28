@@ -141,7 +141,7 @@ The Rugby Shop website has a stylistic design with discrete and warm colors, ins
 My discrete & warm color design choices goes well together with the background image, and are listed here:
 
 Color for the navbar | Color for the footer | Color for the New Collection carousel | Color for landing page | Color for about us text
---- | --- | ---
+--- | --- | --- | --- | ---
 #ec7211 | #ec7211 | #4c2b22 | #f5deb3 | #006400
 
 ## Wireframes
