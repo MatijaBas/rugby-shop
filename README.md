@@ -1,6 +1,9 @@
 [![Build Status](https://travis-ci.org/MatijaBas/rugby-shop.svg?branch=master)](https://travis-ci.org/MatijaBas/rugby-shop)
 
-[Rugby shop](https://rugby-shop.herokuapp.com/)
+# [Rugby shop](https://rugby-shop.herokuapp.com/)
+
+**This is my Milestone Project 4: Full Stack Frameworks with Django - Code Institute**
+-----
 
 ## Table of Contents
 1. [UX](#ux)
@@ -22,12 +25,14 @@
         - [Reviews Page](#reviews-page)
         - [About Page](#about-page)
         - [Contact Page](#contact-page)
+        - [Delivery Page](#delivery-page)
+        - [Return Policy Page](#return-policy-page)
+        - [Terms&Condition Page](#terms-condition-page)
         - [Register Page](#register-page)
         - [Login Page](#login-page)
         - [Profile Page](#profile-page)
         - [Checkout](#checkout)
             - [Cart Page](#cart-page)
-            - [Shipping Page](#shipping-page)
             - [PaymentPage](#paymentt-page)
     - [Features for Future Releases](#features-for-future-releases)
 
