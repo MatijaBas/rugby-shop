@@ -2,11 +2,12 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import MakePaymentForm, NewOrderForm
-from .models import OrderItem
+from .models import OrderItem, Order
 from django.conf import settings
 from django.utils import timezone
 from products.models import Product
 import stripe
+from django.http import Http404
 
 # Create your views here.
 
@@ -86,3 +87,11 @@ def checkout(request):
     # return the checkout html with an order form, a payment form, and a publishable key for Stripe,
     # available on the HTML page when the user clicks on checkout.
     return render(request, "checkout.html", {"order_form": order_form, "payment_form": payment_form, "publishable": settings.STRIPE_PUBLISHABLE})
+
+
+@login_required()
+def order_detail(request, order_id):
+    order = get_object_or_404(Order, pk=order_id)
+    if request.user != order.user:
+        raise Http404()
+    return render(request, "order_detail.html", {"order": order, })

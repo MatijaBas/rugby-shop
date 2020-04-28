@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from .models import Product
 from products.mails import send_subscribe_mail
 
@@ -13,10 +13,11 @@ and will be viewed on the products.html page.
 
 def all_products(request):
     if request.method == "POST":
-        send_subscribe_mail(request.POST)
+        # send_subscribe_mail(request.POST)
         messages.success(
             request, "Thank you for subscribtion. Check your mailbox."
         )
+        return redirect(reverse('index'))
     products = Product.objects.all()
     name = request.GET.get("q")
     if name:

@@ -1,0 +1,6 @@
+<h1>{{ order.date}}</h1>
+{%for order_item in order.order_items.all %}
+{{ order_item.product }}
+<br>
+{% endfor %}
+<hr>

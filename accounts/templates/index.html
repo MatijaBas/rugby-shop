@@ -158,8 +158,8 @@
 									Policy
 								</p>
 
-								<form class="newsletter-form text-center" novalidate="novalidate" method="post"
-									id="newsletter-validate-detail">
+								<form action="{% url 'all_products' %}" class="newsletter-form text-center"
+									novalidate="novalidate" method="post" id="newsletter-validate-detail">
 									{% csrf_token %}
 									<input name="email" type="email" id="newsletter" class="newsletter-input" placeholder="Enter your email address" data-validate="{required:true, 'validate-email':true}">
 									<button class="btn-info" title="Subscribe" type="submit"><span class="text-uppercase">Subscribe</span></button>

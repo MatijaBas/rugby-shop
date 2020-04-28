@@ -32,7 +32,8 @@ class OrderItem(models.Model):
     It returns the quantity of bought products, the name and price of the product.
     """
 
-    order = models.ForeignKey(Order, null=False, on_delete=models.CASCADE)
+    order = models.ForeignKey(
+        Order, null=False, on_delete=models.CASCADE, related_name="order_items")
     product = models.ForeignKey(Product, null=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(blank=False)
 
