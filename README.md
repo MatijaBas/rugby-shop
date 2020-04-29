@@ -199,7 +199,7 @@ Please click here to see all the [Wireframes](https://github.com/MatijaBas/rugby
 
 <br/>
 
-#### About Us
+### About Us
 
 <div align="center">
     <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/about_us1.jpg" alt="Rugby Shop About Us" aria-label="RugbyShop" />
@@ -217,4 +217,62 @@ Please click here to see all the [Wireframes](https://github.com/MatijaBas/rugby
 - Subscribe me form for users who are interested in exclusive offers
 
 <br/>
+
+### Shop
+
+<div align="center">
+    <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/shop.jpg" alt="Rugby Shop Products" aria-label="RugbyShop" />
+</div>
+
+- At the top of products page is a search box where you look for desired item for example "irish jersey"
+- The shop page comprises 3 columns in each row , with 21 product in total.
+Every product is in a card with few details, picture, name, price , old price...
+- When clicking on the image or product name user will be directed to product details where more info will be displayed.
+
+<br/>
+
+### Product details
+
+<div align="center">
+    <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/product-details.jpg" alt="Rugby Shop Products details" aria-label="RugbyShop" />
+</div>
+
+- Larger image gives a customer an better overview what is about to buy
+- The product **title, description, price and old price** are all clearly visible under product panel.
+- Here user can choose a size and quantity of product
+- From this point customer can either add desired item to basket go back shopping or  do checkout if any items in cart.
+
+### Contact Page
+
+<br/>
+
+- The contact page contains a form for the user to fill in to send the shop owner an email.
+- Name, email address and message are all required fields so that the shop owner receives all the information she needs to respond.
+- If the user is logged in then their email address will already be populated in the email field.
+
+***
+<br/>
+
+
+### Register Page
+
+<br/>
+
+
+- A user who is not logged in can create a new account using the register page. The page on this form includes a username (which must be unique), email address, password and password conformation fields. 
+- Information about what characters are accepted by these fields is displayed with the form.
+- If a user who is already logged in tries to access this page, they are redirected to the home page.
+
+***
+<br/>
+
+
+### Login Page
+
+- The login page features a standard login form asking for username and password.
+- Validation for this form is handled in the back end and relevant feedback is sent to the user when they sign in.
+
+<br/>
+
+***
 
