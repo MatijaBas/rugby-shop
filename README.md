@@ -175,4 +175,46 @@ Please click here to see all the [Wireframes](https://github.com/MatijaBas/rugby
     - When user logs in a cart will remain with items picked as anonymous user.
 
 
+<div align="center">
+    <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/navbar-mobile.jpg" alt="Rugby Shop Navbar on mobile devices" aria-label="RugbyShop" />
+</div>
+
+- In mobile view logo is on left and the navigation bar changes to drop downtoggle with categories to choose from underneath logo.
+
 ***
+
+<br/>
+
+### Home Page
+
+<br/>
+
+<div align="center">
+    <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/homepage.jpg" alt="Rugby Shop Homepage" aria-label="RugbyShop" />
+</div>
+
+<br/>
+
+- The home page is welcoming users and ofering them a button to browse products, and underneath that is carousel with new collections
+
+<br/>
+
+#### About Us
+
+<div align="center">
+    <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/about_us1.jpg" alt="Rugby Shop About Us" aria-label="RugbyShop" />
+</div>
+
+- Text about how did shop start and little bit of history about Rugby Shop
+
+<br/>
+
+<div align="center">
+    <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/about_us2.jpg" alt="Rugby Shop About Us" aria-label="RugbyShop" />
+</div>
+
+- Few pictures from first days, when shop was open, 
+- Subscribe me form for users who are interested in exclusive offers
+
+<br/>
+
