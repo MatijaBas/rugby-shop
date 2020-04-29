@@ -18,6 +18,14 @@ body {
 
 /*-------Navbar ------------------------------------------------------ */
 
+nav a {
+    color: #2d2323d9;
+}
+
+nav a:hover {
+    color: white;
+}
+
 .navbar {
     background-color: #ec7211;
 }
@@ -99,7 +107,7 @@ body {
 .content_imgs_featured {
     padding: 30px 20px 40px 20px;
     margin: auto;
-    background-color: #4c2b22;
+    background-color: #adb5bd;
 }
 
 .carousel-inner img {
@@ -120,8 +128,14 @@ body {
 } 
 
 .about_me {
-    color: darkgreen;
-    background-color: wheat;
+    color: #1a251a;
+    background-color: #f8f9fa;
+}
+
+.owner-img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 }
 
 /*---------- Register and Login forms -----------------------------------*/
@@ -164,7 +178,7 @@ caption p {
     padding: 15px;
     margin: 15px;
     background-color: white;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .panel_default {
@@ -198,7 +212,7 @@ caption p {
 }
 
 .input-group {
-        margin-top: 15px;
+        margin-top: 20px;
 }
 
 .products_heading {
@@ -223,6 +237,11 @@ caption p {
     text-decoration: none; */
 }
 
+.product-info {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
 /*---------- Contact form ----------------------------------------------*/
 
 .contact_btn {
@@ -238,48 +257,6 @@ caption p {
 
 
 /*---------- Subscription Form ----------------------------------------------*/
-
-/* .signup-wrapper {
-    background-color: #f5f5f5;
-    color: #00000080;
-}
-
-.signup-wrapper .signupInner {
-    float: none;
-    border: none;
-    max-width: 1000px;
-    overflow: hidden;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-.signup-email {
-    margin-left: -5px;
-    margin-right: -5px;
-}
-
-.signbut {
-    background-color: #000;
-    color: whitesmoke;
-    font-size: 1.2em;
-    height: 37px;
-    letter-spacing: .1em;
-    padding: 5px;
-}
-
-.disclaimerText {
-    margin-top: 20px;
-    font-size: 1.1em;
-}
-
-.signup-wrapper .signupInner .join-us-text {
-    text-align: right;
-    width: 20%;
-    padding-top: 0;
-    line-height: 37px;
-    overflow: hidden;
-} */
-
 
 .subscribe {
     color: #171732;

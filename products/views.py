@@ -15,7 +15,7 @@ def all_products(request):
     if request.method == "POST":
         # send_subscribe_mail(request.POST)
         messages.success(
-            request, "Thank you for subscribtion. Check your mailbox."
+            request, "Thank you for subscribtion."
         )
         return redirect(reverse('index'))
     products = Product.objects.all()
