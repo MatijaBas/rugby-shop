@@ -1,6 +1,21 @@
-<h1>{{ order.date}}</h1>
-{%for order_item in order.order_items.all %}
-{{ order_item.product }}
-<br>
-{% endfor %}
-<hr>
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+
+<!-- Page title here -->
+{% block page_title %}Order Details | Rugby Shop{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center text-center">
+	<div class="col-6 bg-light rounded order-details">
+		<h1>{{ order.date}}</h1>
+		{%for order_item in order.order_items.all %}
+		<p>{{ order_item.product }}</p>
+		<br>
+        {% endfor %}
+		<hr>
+		<a class="btn btn-info text-white mt-3 mb-3" href="{% url 'profile' %}" role="button">View Profile</a>
+	</div>
+</div>
+{% endblock %}

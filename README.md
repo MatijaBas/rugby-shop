@@ -142,6 +142,6 @@ My discrete & warm color design choices goes well together with the background i
 
 Color for the navbar | Color for the footer | Color for the New Collection carousel | Color for landing page | Color for about us text
 --- | --- | --- | --- | ---
-#ec7211 | #ec7211 | #4c2b22 | #f5deb3 | #006400
+#ec7211 | #ec7211 | #4c2b22 | #f8f9fa | #1a251a
 
 ## Wireframes

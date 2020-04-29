@@ -148,6 +148,10 @@ nav a:hover {
     margin-top: 3rem;
 }
 
+.order-details {
+    margin-top: 55px;
+}
+
 /*------------Shop page content----------------------------------------- */
 
 
@@ -182,7 +186,7 @@ caption p {
 }
 
 .panel_default {
-    margin-bottom: 35px;
+    margin-bottom: 50px;
 }
 
 /*----------------------- The product image -----------------------*/

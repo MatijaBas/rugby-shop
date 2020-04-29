@@ -27,11 +27,16 @@
 	</div>
 	<div class="col-10 col-md-4 text-center bg-light rounded mb-3">
 		<br>
+
 		<p class="text-dark lead">Your order history</p>
 		{% for order in user.orders.all %}
-		{{ order.date }}
-		<br>
-        {% endfor %}
+		<div class="card pages-row ">
+			<a class="text-dark mt-3 mb-3" href="{% url 'order_detail' order.id %}" role="link">
+				{{ order.date }}
+				<br>
+            </a>
+		</div>
+		{% endfor %}
 	</div>
-	</div>
-	{% endblock %}
+</div>
+{% endblock %}
