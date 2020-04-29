@@ -145,3 +145,34 @@ Color for the navbar | Color for the footer | Color for the New Collection carou
 #ec7211 | #ec7211 | #4c2b22 | #f8f9fa | #1a251a
 
 ## Wireframes
+
+Please click here to see all the [Wireframes](https://github.com/MatijaBas/rugby-shop/tree/master/wireframes) created.
+
+# Features
+ 
+## Existing Features
+
+### Elements on every page
+
+#### Navbar:
+
+<div align="center">
+    <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/navbar1.jpg" alt="Rugby Shop Navbar" aria-label="RugbyShop" />
+</div>
+
+- The navbar is top and fix , features on every page. RugbyShop logo on the far left which links to the home page of the site.
+
+- Next to the logo is Home, Register and Login or Home, Profile and LogOut If user is loged in.
+
+- In the middle of Navbar is name of the webpage so user know all the time where he is.
+
+- On the right side of the navbar visitors can find links to Shop, reviews and cart
+
+  -  The shopping cart counter works even for a user who is not logged in. This is because all the information about which products the user has added 
+      to their cart is stored in their session data. This makes it possible for a new user to add things to their cart before being asked to log in or register. 
+      This way user can add items to cart without registering, however when user will go to cart and will try to do checkout he/she will be directed to login/register page.
+    
+    - When user logs in a cart will remain with items picked as anonymous user.
+
+
+***
