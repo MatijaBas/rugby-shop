@@ -4,4 +4,4 @@ __pycache__/
 .theia/
 env.py
 *.png
-media/*
+media/
