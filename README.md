@@ -16,24 +16,24 @@
 
 2. [Features](#features)
     - [Existing Features](#existing-features)
-        - [Header](#header)
         - [Navbar](#navbar)
-        - [Footer](#footer)
         - [Home Page](#home-page)
-        - [Products Page](#products-page)
+        - [About Us](#about-us)
+        - [Shop](#shop)
             - [Product Details Page](#product-details-page)
-        - [Reviews Page](#reviews-page)
-        - [About Page](#about-page)
         - [Contact Page](#contact-page)
-        - [Delivery Page](#delivery-page)
-        - [Return Policy Page](#return-policy-page)
-        - [Terms&Condition Page](#terms-condition-page)
         - [Register Page](#register-page)
         - [Login Page](#login-page)
         - [Profile Page](#profile-page)
-        - [Checkout](#checkout)
-            - [Cart Page](#cart)
-            - [Payment Page](#payment-page)
+        - [Log out Page](#log-out-page)
+        - [Reviews Page](#reviews-page)
+         - [Checkout page](#checkout-page)
+            - [Cart](#cart)
+            - [Payment](#payment)
+        - [Terms & Condition Page](#terms-&-condition-page)
+        - [Delivery Page](#delivery-page)
+        - [Return Policy Page](#return-policy-page)
+        - [Footer](#footer)
     - [Features for Future Releases](#features-for-future-releases)
 
 3. [Information Architecture](#information-architecture)
@@ -234,7 +234,7 @@ Every product is in a card with few details, picture, name, price , old price...
 
 <br/>
 
-### Product details
+### Product details page
 
 <div align="center">
     <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/product-details.jpg" alt="Rugby Shop Products details" aria-label="RugbyShop" />
@@ -292,12 +292,13 @@ Every product is in a card with few details, picture, name, price , old price...
 <br/>
 
 ### Log out page
+
 - Any user who clicks on "Log out" from the navigation bar is automatically logged out and their session data cleared. 
 - The message on top page will inform the user what action was made. After login back in the users cart will be empty.
 ***
 <br/>
 
-### Reviews
+### Reviews page
 
 <div align="center">
     <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/reviews.jpg" alt="Rugby Shop Reviews" aria-label="RugbyShop" />
@@ -307,20 +308,20 @@ Every product is in a card with few details, picture, name, price , old price...
 
 <br/>
 
-### Checkout
+### Checkout page
 
 <br/>
 
 - Checkout process starts when you click on cart that will show user summary of the shopping he made. From here you can either go back and
   continue shopping or proceed to shipping details. 
     
-- The checkout process is broken up into 3 stages. The reason for this was to break up the process into small steps as is common in online shops.
+- The checkout process is broken up into 2 stages. The reason for this was to break up the process into small steps as is common in online shops.
 
     <br/>
 
     ***
 
-    1. **Cart**
+    1. ### Cart
 
         <br/>
 
@@ -358,7 +359,7 @@ Every product is in a card with few details, picture, name, price , old price...
 
     ***
 
-    2. **Payment**
+    2. ### Payment
 
     <div align="center">
         <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/checkout.jpg" alt="Rugby Shop checkout" aria-label="RugbyShop" />
@@ -370,6 +371,20 @@ Every product is in a card with few details, picture, name, price , old price...
     - On the end a confirmation email is send to customer, thanking for shopping.
 
 <br/>
+
+### Terms & Condition Page
+
+- Every trustworthy online shop provides the legal documentation expected by the user on their site. Although these documents are a legal requirement of any online shop, including them also helps users to feel they can trust the outlet.
+
+### Delivery Page
+
+- Contain all information about delivery, from time and cost to different location around the world. There is also Frequently Asked Questions.
+
+### Return Policy Page
+
+- This page provides the user with shipping options to choose from. At this point there is only one shipping option available, however this page and functionality have been left in so that other options such as expedited shipping may be added with a future release.
+- As a shipping method is automatically selected, the order summary now reflects the total cost including shipping.
+- The "Continue to payment" button leads the user to the payment page hosted by Stripe.
 
 ### Footer
 
@@ -792,7 +807,7 @@ Click the link below to run my project in the live environment:
 
 ## Acknowledgements
 
-Special thanks to my mentor Brian Macharia for his time, expertise and friendship through my entire journey through the CodeInstitute full stack web development course.Thank to his incredible knowledge and patience that helped me get so far.
+- Special thanks to my mentor Brian Macharia for his time, expertise and friendship through my entire journey through the CodeInstitute full stack web development course.Thank to his incredible knowledge and patience that helped me get so far.
 
 - Thanks to everybody on SLACK that help me when I was stuck and needed assistance. Thanks Tutors aswell. They help me to debug my Python code.
 
