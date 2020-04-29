@@ -32,8 +32,8 @@
         - [Login Page](#login-page)
         - [Profile Page](#profile-page)
         - [Checkout](#checkout)
-            - [Cart Page](#cart-page)
-            - [PaymentPage](#paymentt-page)
+            - [Cart Page](#cart)
+            - [Payment Page](#payment-page)
     - [Features for Future Releases](#features-for-future-releases)
 
 3. [Information Architecture](#information-architecture)
@@ -477,7 +477,7 @@ Quantity | quantity | ---- | IntegerField
 
 <br/>
 
-### Accounts app model
+### Accounts app models
 
 <br/>
 
@@ -614,3 +614,193 @@ however Django has build in protection that does not allow to do it.
 <br/>
 
 ## Deployment
+
+### How to run this project locally
+
+To run my code locally, users can download a local copy of my code to their desktop by completing the following steps:
+
+1. Go to [my GitHub repository]https://github.com/MatijaBas/rugby-shop)
+2. Click on 'Clone or download' under the repository name.
+3. Copy the clone URL for the repository in the 'Clone with HTTPs section'.
+4. Open 'Git Bash' in your local IDE.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, then paste the URL you copied in Step 3:
+
+    ```git clone https://github.com/USERNAME/REPOSITORY```
+
+7. Press `Enter` to complete the process and create your local clone.
+8. Complete one of the two below steps in your local workspace to set your own credentials for the environment variables:
+    - Enter and save your own credentials in the `.baschrc` file; or
+    - Create a `.env,py` file with your own credentials and import this into the `settings.py` file
+9. Install the `requirements.txt` file by running the below command in your CLI Terminal:
+
+    ```pip3 install -r requirements.txt```
+
+10. Run one of the following commands in your Terminal to launch the Django project:
+
+    ```python3 manage.py runserver```
+
+11. Click the `http://` link that loads, and the project should load. If it doesn't load when you click the link, copy and paste it into a new browser tab instead.
+12. Run the following commands to migrate the database models and create a super user:
+
+    ```
+    python3 manage.py makemigrations
+    python3 manage.py migrate
+    python3 manage.py createsuperuser
+    ```
+
+13. In the heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
+14. Set the following config vars in heroku :
+
+<div align="center">
+    <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/config-vars-heroku.jpg" alt="Rugby Shop configvars" aria-label="RugbyShop" />
+</div>
+
+<br/>
+
+Once the migrations are completed and the super user has been created successfully, the site should be running locally.
+
+### Media And Static Folders
+
+During development, my `static` and `media` folders weren't pushed to GitHub only in the early parts of the project.
+During the progress developer was instructed to keep them in .gitignore file, as they are hosted in my S3 bucket for 
+the live version of the site.
+
+
+  
+To allow you to access all functionality on the site locally, ensure you have created free accounts with the following services:
+    - [Stripe](https://dashboard.stripe.com/register)
+    - [AWS](https://aws.amazon.com/) and [set up an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
+    - [emailjs](https://www.emailjs.com/)
+
+Please click the links above for documentation on how to set these up and retrieve the necessary environment variables.
+
+
+### In Gitpod you create env.py file in main directory and write in first line: import os. Use table below to copy required fields.
+
+<br/>
+
+
+| Default quote | Your key | 
+--- | --- 
+os.environ.setdefault | "AWS_ACCESS_KEY_ID", "access_key_goes_here" | 
+os.environ.setdefault | "AWS_SECRET_ACCESS_KEY","secret_access_key_goes_here" |
+os.environ.setdefault | "DATABASE_URL", "postgres://your postgres key, you get it from heroku") |
+os.environ.setdefault | "EMAIL_ADDRESS","your_mail@gmail.com" | 
+os.environ.setdefault | EMAIL_PASSWORD", "your_password" |
+os.environ.setdefault | "SECRET_KEY", "secret_key_goes_here" | 
+os.environ.setdefault | "STRIPE_PUBLISHABLE", "pk_test_your_key_goes_here" | 
+os.environ.setdefault | "STRIPE_SECRET", "sk_test_dtripe_key_goes_here" | 
+
+<br/>
+
+### Repository Link
+
+Click the link below to visit my project's GitHub repository:
+
+[Rugby Shop GitHub Repository](https://github.com/MatijaBas/rugby-shop)
+
+## Heroku Deployment
+
+I used GitHub for my version control and Heroku to host the live version of my project. To deploy my website to Heroku, I used use the following steps:
+
+1. Created the app in Heroku.
+2. Went to the **Resources** tab in Heroku and searched for **Heroku Postgres** in the 'Add-Ons' section.
+3. Selected the free **Hobby** level.
+4. Updated the `.bashrc` file within my local workspace with the `DATABASE_URL` details, and the `settings.py` to connect to the database using the `dj_database_url` package.
+5. Ran the `python3 manage.py makemigrations`, `python3 manage.py migrate`, `python3 manage.py createsuperuser` commands to migrate the models into Heroku Postgres and create a new super user in the new PostgreSQL database.
+5. Went to the **Settings** tab in Heroku and clicked on the **Reveal Config Vars** button.
+6. Copied and paste all of the default variables from env.py  in to Heroku's Config Vars section.
+
+| Default quote | Your key | 
+--- | --- 
+os.environ.setdefault | "AWS_ACCESS_KEY_ID", "access_key_goes_here" | 
+os.environ.setdefault | "AWS_SECRET_ACCESS_KEY","secret_access_key_goes_here" |
+os.environ.setdefault | "DATABASE_URL", "postgres://your postgres key, you get it from heroku") |
+os.environ.setdefault | "EMAIL_ADDRESS","your_mail@gmail.com" | 
+os.environ.setdefault | EMAIL_PASSWORD", "your_password" |
+os.environ.setdefault | "SECRET_KEY", "secret_key_goes_here" | 
+os.environ.setdefault | "STRIPE_PUBLISHABLE", "pk_test_your_key_goes_here" | 
+os.environ.setdefault | "STRIPE_SECRET", "sk_test_dtripe_key_goes_here" | 
+ 
+  
+7. Went to the **Deploy** tab in Heroku, connected my app to my GitHub repository and selected **Enable Automatic Deployment** as the deployment method.
+8. Went to the **Developers** section in Stripe and clicked on **API Keys**.
+9. Copied and pasted the **Publishable Key** and **Secret Key** and set them as the `STRIPE_PUBLISHABLE` and `STRIPE_SECRET` environment variables in the `.bashrc` file within my local workspace.
+10. Updated the `settings.py` with the new Stripe environment variables.
+11. Went to the **S3** section of AWS and created a new S3 bucket.
+12. Updated the `settings.py` file in my local workspace with the relevant S3 bucket details:
+
+    ```
+    AWS_S3_OBJECT_PARAMETERS = {
+        "Expires": "Thu, 31 Dec 2099 20:00:00 GMT",
+        "CacheControl": "max-age=94608000",
+    }
+    AWS_STORAGE_BUCKET_NAME = "<s3-bucket-name>"
+    AWS_S3_REGION_NAME = "<region-name>"
+    AWS_ACCESS_KEY_ID = <access-key-id>
+    AWS_SECRET_ACCESS_KEY = <secret-access-key>
+    AWS_S3_CUSTOM_DOMAIN = "%s.s3.amazonaws.com" % AWS_STORAGE_BUCKET_NAME
+    AWS_DEFAULT_ACL = None
+    ```
+13. Created a `custom_storages.py` file with classes to route to the relevant location settings for static and media files.
+14. Updated the `settings.py` file with the relevant configuration for static and media file storage.
+15. Ran the `python3 manage.py collectstatic` command to push the static files to my S3 bucket.
+16. Created a requirements.txt file using the following command in the terminal window:
+
+    ```pip3 freeze --local > requirements.txt```
+
+17. Created a Procfile using the following command in the terminal window:
+
+    ```web: gunicorn nutristore.wsgi:application> Procfile```
+
+18. Ran the `git add .`, `git commit -m "<commit-message>"` and `git push` commands to push all changes to my GitHub repository.
+
+The app was successfully deployed to Heroku at this stage.
+
+### Live App Link
+
+Click the link below to run my project in the live environment:
+
+[Rugby shop](https://rugby-shop.herokuapp.com/)
+
+
+# Credits
+
+## Content
+- Order Confirmation [Wokiee](https://themeforest.net/item/wokiee-multipurpose-shopify-theme/22559417)
+- For the New Collections carousel I´m using a Carousel code snippet example, the third example With Indicators, copied from [MDBootstrap](https://mdbootstrap.com/docs/jquery/javascript/carousel/) and then modified for my own needs.
+-  Inspiration was taken from fallowing websites:
+    - [Elverys](https://www.elverys.ie/)
+    - [SportsDirect.com](https://www.sportsdirect.com/)
+    - [WorldRugbyShop](https://www.worldrugbyshop.com/)
+
+## Images
+- All product photography was taken from
+    - [Elverys](https://www.elverys.ie/)
+    - [SportsDirect.com](https://www.sportsdirect.com/)
+
+## Code
+
+- The following youtube video series provided much explanation about the use and operation of Django2
+    - [Python Django Web Framework by freeCodeCamp.org](https://www.youtube.com/watch?v=F5mRW0jo-U4)
+    - [Python Django Tutorial by Corey Schafer](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p)
+
+## Text verification
+
+- To check and verify entire vocabulary in Readme.md file developer used  [Spell Checker](https://www.reverso.net/spell-checker/english-spelling-grammar/)
+
+## Acknowledgements
+
+Special thanks to my mentor Brian Macharia for his time, expertise and friendship through my entire journey through the CodeInstitute full stack web development course.Thank to his incredible knowledge and patience that helped me get so far.
+
+- Thanks to everybody on SLACK that help me when I was stuck and needed assistance. Thanks Tutors aswell. They help me to debug my Python code.
+
+### And finally thanks to my wife and my family,to gave me precious time so I can work on my projects, she is biggest support I can imagine.
+
+# Contact
+To contact me feel free to email
+
+ `mbasanov (at) gmail (dot) com`
+
+ ## This project is for educational purposes only.
