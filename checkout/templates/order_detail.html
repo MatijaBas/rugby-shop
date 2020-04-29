@@ -10,6 +10,8 @@
 <div class="row justify-content-center text-center">
 	<div class="col-6 bg-light rounded order-details">
 		<h1>{{ order.date}}</h1>
+		<hr>
+		<hr>
 		{%for order_item in order.order_items.all %}
 		<p>{{ order_item.product }}</p>
 		<br>
