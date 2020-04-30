@@ -92,7 +92,7 @@ nav a:hover {
 }
 
 
-/*-----images for featured products row-----*/
+/*-----images for new cllection row-----*/
 
 .bg_images_featured {
     background-size: cover;
@@ -102,7 +102,7 @@ nav a:hover {
     padding: 0px;
 }
 
-/*----column Content for the featured products carousel----*/
+/*----column Content for the new collection carousel----*/
 
 .content_imgs_featured {
     padding: 30px 20px 40px 20px;
@@ -122,7 +122,7 @@ nav a:hover {
     width: 100%;
 }
 
-/*---------- About Us section ----------------------------------------- */
+/*---------- About Us section ------------------------------ */
  .about_section {
     padding: 20px 55px;
 } 
@@ -138,7 +138,8 @@ nav a:hover {
 }
 }
 
-/*---------- Register and Login forms -----------------------------------*/
+/*---------- Register and Login forms --------------------------*/
+
 .accountform {
     padding-top: 20px;
     padding-bottom: 30px;
@@ -146,6 +147,10 @@ nav a:hover {
 
 .log-in {
     margin-top: 3rem;
+}
+
+.log-box {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .order-details {
@@ -169,7 +174,6 @@ caption p {
     flex-wrap: wrap;
     margin: 15px;
     align-content: center;
-    /* height: 60%; */
 }
 
 .product-post {
@@ -202,7 +206,6 @@ caption p {
 .product:hover {
     transform: scale(1.5);
 }
-
 
 .products_card {
     border: 1px solid #ddd;
@@ -252,13 +255,25 @@ caption p {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-/*---------- Delivery Information------------------------------------------*/
+/*---------- Delivery Information----------------------------------------*/
 
 .tittle-cl {
     color: aquamarine;
 }
 
-/*---------- Subscription Form ----------------------------------------------*/
+/*---------- Terms&Condition Policy -------------------------------------*/
+
+.terms-base {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+}
+
+.terms-body {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*---------- Subscription Form -------------------------------------------*/
 
 .subscribe {
     color: #171732;
@@ -277,6 +292,13 @@ caption p {
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+}
+
+.newsletter-row #newsletter {
+    letter-spacing: 2px;
+    text-align: center;
+    border-radius: 9px;
+    width: 287px;
 }
 
 #newsletter-validate-detail > button {
@@ -374,11 +396,4 @@ footer a:hover {
 
 .btn-info:hover {
     background-color: #184c16;
-}
-
-.newsletter-row #newsletter {
-    letter-spacing: 2px;
-    text-align: center;
-    border-radius: 9px;
-    width: 287px;
 }

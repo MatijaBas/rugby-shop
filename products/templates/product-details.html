@@ -6,7 +6,7 @@
 {% block page_title %}Product details | Rugby Shop{% endblock %}
 
 {% block content %}
-
+<!-- Product-details card -->
 <div class="container footer-push-down product-info" style="margin-top: 40px;
     margin-bottom: 45px;">
 	<div class="card pages-row">
@@ -40,6 +40,7 @@
                             <option value="Size XXXL">Size XXXL</option>
                         </select>
 					</div>
+					<!-- Form for add to cart -->
 					<div class="col-12 text-center">
 						<div class="action">
 							<form method="post" action="{% url 'add_to_cart' product.id %}" data-add-basket-form>
