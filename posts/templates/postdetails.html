@@ -23,19 +23,19 @@
 		<hr>
 		<p>Posted: {{ post.published_date }}</p>
 		<hr>
-		{% if post.image %}
-		<img class="img-fluid rounded" src="{{ MEDIA_URL }}{{ post.image }}">
+		<div class="text-center">
+			{% if post.image %}
+			<img class="img-fluid rounded text-center" src="{{ MEDIA_URL }}{{ post.image }}">
         {% endif %}
-		<hr>
-		<p class="text-center"> {{ post.content }} </p>
+        </div>
+			<hr>
+			<p class="text-center"> {{ post.content }} </p>
+			<blockquote class="blockquote">
+				<p class="blockquote text-right">Author:<cite class="ml-2"> {{ post.author }} </cite>
+				</p>
+			</blockquote>
+			<a href="{% url 'get_posts' %}" class="btn btn-info rounded-1 mb-3">Go back to Blog</a>
 
-		<blockquote class="blockquote">
-			<p class="blockquote text-right">Author:<cite class="ml-2"> {{ post.author }} </cite>
-			</p>
-		</blockquote>
-
-		<a href="{% url 'get_posts' %}" class="btn btn-info rounded-1 mb-3">Go back to Blog</a>
-
+		</div>
 	</div>
-</div>
-{% endblock %}
+	{% endblock %}
