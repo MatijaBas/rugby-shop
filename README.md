@@ -26,6 +26,7 @@
         - [Login Page](#login-page)
         - [Profile Page](#profile-page)
         - [Log out Page](#log-out-page)
+        - [Blog Page](#blog-page)
         - [Reviews Page](#reviews-page)
          - [Checkout page](#checkout-page)
             - [Cart](#cart)
@@ -76,7 +77,7 @@
 the [Code Institute Full Stack Web Development Diploma](https://codeinstitute.net/). The project has been developed using [Django](https://www.djangoproject.com/), with the goal of 
 fulfilling the requirements of the final, Full-Stack Milestone Project of the Code Institute Full-Stack Software Developer Course.
 This page is made after a lot of thinking and negotiation with the man name Seamus who owns the shops.
-The purpose of the Rugby shop online page is to help bussines owner Seamus to sell some of his products on line during lockdown in Ireland coused by global pandemic call COVID-19. Because all his 50 shops are closed now, this is the only way for Seamus to sell some products and try to save a company and try bussines to continue.
+The purpose of the Rugby shop online page is to help bussines owner Seamus to sell some of his products on line during lockdown in Ireland coused by global pandemic call COVID-19. Because all his 50 shops are closed now, this is the only way for Seamus to sell some products and try to save a company and keep bussines going.
 
 All images displayed in project are stored in an [AWS S3](https://aws.amazon.com/s3/) bucket, as are static files like CSS, icons and user-uploaded pictures.
 
@@ -91,7 +92,7 @@ The project is hosted at [Heroku](https://www.heroku.com/). A [Postgresql](https
 The visitors that are targeted by Rugby Shop are:
 - Professionals who are looking for good product for their team
 - Amateurs that want to play a rugby in their favorite jersey
-- People that want to get perfect birthay present
+- People that want to get perfect Birthday present
 - People that are just bored becouse of COVID-19 and looking to spend some money
 
 User goals are:
@@ -103,7 +104,7 @@ User goals are:
 
 The online Rugby Shop is a great way to meet these needs because:
 - The website has been designed to provide a clear view of product visitors are looking for.
-- In navbar , visitors can find Home, Login and Register, Shop button with all products where they can search for specific product, Reviews and Cart
+- In navbar, visitors can find Home, Login and Register, Shop button with all products where they can search for specific product, Reviews and Cart
 - Buyers can leave review if they are logged in
 
 ### Business Goals
@@ -113,7 +114,7 @@ The Goals of The Rugby Shop business are:
 - Build brand awareness by including all the colors, fonts and logo associated with The Rugby Shop.
 - Build Rugby Shop newsletter subscriptions.
 - Fast and efficient delivery.
-- Make sales of products easy for buyers to increase sales conversion.
+- Make easy sales of products to increase sales conversion.
 - The presentation and layout of the site may not cause consternation, loss, or a desire to resign from shopping.
 
 ## User Stories
@@ -123,11 +124,11 @@ A Visitor to The Rugby Shop website  expects/wants/needs:
 1. As a creative, mindful person I would rather buy products from local shop to support small local business owners with a personal touch, instead of buying products from big companies.
 
 2. As new visitor I want ability to search through small amounts of information to find what I need, and then be able to easily click to get more detailed information.
-As new customer I dont want to be confused by the layout or process of payment, and be able to easy find what i am looking for.
+As new customer I don't want to be confused by the layout or process of payment, and be able to easily find what i am looking for.
 
-4. In order to avoid unawareness of purchase, I want product information must be sufficiently clear to understand.
+4. In order to avoid unawareness of purchase, I want product information to be sufficiently clear to understand.
 
-5. A text search function so that I can quickly narrow down my search when looking for something specific.I need To be able to see a summary of my order on every page of the checkout process. When I am logged in I can access my account details and update them if I need to. 
+5. A text search function so that I can quickly narrow down my search when looking for something specific. I need To be able to see a summary of my order on every page of the checkout process. When I am logged in I can access my account details and update them if I need to. 
 I expect to be able to find information on my past orders. 
 I expect to be able to easily get in contact with the shop owner via a contact form.
 
@@ -136,12 +137,12 @@ Whenever a user adds an item to their cart or adjusts the quantity in their cart
 
 ## Design Choices
 
-The Rugby Shop website has a stylistic design with discrete and warm colors, inspiring images and simple buttons.
+The Rugby Shop website has a stylistic design with remebarable colors, inspiring images and simple buttons.
 
 ### Fonts
 - The primary font [Merriweather](https://fonts.google.com/specimen/Merriweather?query=me) provides an artistic feeling, but are at the same time easy to read, which I think suits the purpose of the page and it´s audience.
 
-My discrete & warm color design choices goes well together with the background image, and are listed here:
+My memorable color design choices goes well together with the background image, and are listed here:
 
 Color for the navbar | Color for the footer | Color for the New Collection carousel | Color for landing page | Color for about us text
 --- | --- | --- | --- | ---
@@ -173,7 +174,7 @@ Please click here to see all the [Wireframes](https://github.com/MatijaBas/rugby
 
   -  The shopping cart counter works even for a user who is not logged in. This is because all the information about which products the user has added 
       to their cart is stored in their session data. This makes it possible for a new user to add things to their cart before being asked to log in or register. 
-      This way user can add items to cart without registering, however when user will go to cart and will try to do checkout he/she will be directed to login/register page.
+      This way user can add items to cart without registering, however when user goes to cart and tries to do checkout he/she will be directed to login/register page.
     
     - When user logs in a cart will remain with items picked as anonymous user.
 
@@ -227,9 +228,9 @@ Please click here to see all the [Wireframes](https://github.com/MatijaBas/rugby
     <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/shop.jpg" alt="Rugby Shop Products" aria-label="RugbyShop" />
 </div>
 
-- At the top of products page is a search box where you look for desired item for example "irish jersey"
+- At the top of products page is a search box where you look for desired item for example "Irish Jersey"
 - The shop page comprises 3 columns in each row , with 21 product in total.
-Every product is in a card with few details, picture, name, price , old price...
+Every product is in a card with few details, picture, name, price, old price...
 - When clicking on the image or product name user will be directed to product details where more info will be displayed.
 
 <br/>
@@ -243,14 +244,14 @@ Every product is in a card with few details, picture, name, price , old price...
 - Larger image gives a customer an better overview what is about to buy
 - The product **title, description, price and old price** are all clearly visible under product panel.
 - Here user can choose a size and quantity of product
-- From this point customer can either add desired item to basket go back shopping or  do checkout if any items in cart.
+- From this point customer can either add desired item to basket, go back shopping or  do checkout if any items are in cart.
 
 ### Contact Page
 
 <br/>
 
 - The contact page contains a form for the user to fill in to send the shop owner an email.
-- Name, email address and message are all required fields so that the shop owner receives all the information she needs to respond.
+- Name, email address and message are all required fields so that the shop owner receives all the information he needs to respond.
 - If the user is logged in then their email address will already be populated in the email field.
 
 ***
@@ -285,8 +286,8 @@ Every product is in a card with few details, picture, name, price , old price...
     <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/profile.jpg" alt="Rugby Shop Profile" aria-label="RugbyShop" />
 </div>
 
-- The users account page can only be accessed by a logged in user if user not logged in the Profile icon is not displayed.
-- The account page has basic info about user. All this details are saved after filling shipping details, so user will have his profile filled after that step.
+- The users account page can only be accessed by a logged in user. If user not logged in, the Profile icon is not displayed.
+- The account page has basic info about user. All these details are saved after filling shipping details, so user will have his profile filled after that step.
 - The user can see history of shoping sorted by dates and on click, user can see what he bought
 
 <br/>
@@ -294,8 +295,19 @@ Every product is in a card with few details, picture, name, price , old price...
 ### Log out page
 
 - Any user who clicks on "Log out" from the navigation bar is automatically logged out and their session data cleared. 
-- The message on top page will inform the user what action was made. After login back in the users cart will be empty.
+- The message on top page will inform the user what action was made. After login back in, the users cart will be empty.
 ***
+<br/>
+
+### Blog page
+
+<div align="center">
+    <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/blog.jpg" alt="Rugby Shop Blog" aria-label="RugbyShop" />
+</div>
+
+- On the Blog page the user can read all posts and news about shop
+and rugby in general.
+
 <br/>
 
 ### Reviews page
@@ -331,16 +343,15 @@ Every product is in a card with few details, picture, name, price , old price...
 
 - The shopping cart page features a summary of all the items the user has added to their cart.
 
-- Each list item includes a picture of the item, the item title and price.
+- Each item listing includes a picture of the item, the item title and price.
 
 - The total amount and cart view is available to see in top right corner of the page.
 
 - A quantity field is displayed with each cart item, giving the user the ability to adjust the quantity in their cart. Any time a quantity is adjusted the subtotal displayed is updated to reflect the change
 - User that is not logged in will be directed to login page that also gives option to register. Only registered customer will be able to proceed to the checkout page. 
 
-- Very important feature that starts in cart is that the user always have a two buttons to click KEEP SHOPPING or
+- Very important feature that starts in cart is that the user always havehas two buttons to click KEEP SHOPPING or
  CONTINUE to Payment, this way user is never forced to use back button in the browser.
-
 <br/>
 
 - Here customer is introduced to items selected during shopping and total price.
@@ -365,10 +376,10 @@ Every product is in a card with few details, picture, name, price , old price...
         <img src="https://rugby-shop.s3-eu-west-1.amazonaws.com/static/img/checkout.jpg" alt="Rugby Shop checkout" aria-label="RugbyShop" />
     </div>
 
- - The Stripe payment page includes a summary of what the user is buying, and fields to enter credit card information.
+ - The Stripe payment page includes a summary of what the user is buying and fields to enter credit card information.
     - All the validation and messages to the user on this page are handled by stripe.
     - On clicking the "Pay" button and on successful completion of payment.
-    - On the end a confirmation email is send to customer, thanking for shopping.
+    - In the end a confirmation email is send to customer, thanking them for their shopping.
 
 <br/>
 
@@ -383,7 +394,7 @@ Every product is in a card with few details, picture, name, price , old price...
 ### Return Policy Page
 
 - This page provides the user with shipping options to choose from. At this point there is only one shipping option available, however this page and functionality have been left in so that other options such as expedited shipping may be added with a future release.
-- As a shipping method is automatically selected, the order summary now reflects the total cost including shipping.
+- As shipping method is automatically selected, the order summary now reflects the total cost including shipping.
 - The "Continue to payment" button leads the user to the payment page hosted by Stripe.
 
 ### Footer
@@ -415,7 +426,7 @@ Every product is in a card with few details, picture, name, price , old price...
 
 ### Features for Future Releases
 
-- I want to add pagination to the products page. As for now, there are only 21 products added in the products page, but pagination added would be great for when the amount of products can increase over time as the business grows.
+- I want to add pagination to the products page. As for now, there are only 21 products added in the products page, but pagination added would be great for when the amount of products increases over time as the business grows.
 - Coupons and discount codes.
 - Additional payment methods.
 - Auto login when registering a new account
