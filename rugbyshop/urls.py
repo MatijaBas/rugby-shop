@@ -26,6 +26,8 @@ from home import urls as urls_home
 from home.views import contact
 from review import urls as urls_review
 from review.views import get_review
+from posts import urls as urls_posts
+from posts.views import get_posts
 from django.views import static
 from .settings import MEDIA_ROOT
 
@@ -40,6 +42,9 @@ urlpatterns = [
     url(r'^review/', include('review.urls')),
     url(r'^review/', include(urls_review)),
     url(r"^review$", get_review, name="get_review"),
+    url(r'^posts/', include('posts.urls')),
+    url(r'^posts/', include(urls_posts)),
+    url(r"^posts$", get_posts, name="get_posts"),
     url(r'^search/', include(urls_search)),
     url(r'^home/', include(urls_home)),
     url(r'^contact/', contact, name='contact'),

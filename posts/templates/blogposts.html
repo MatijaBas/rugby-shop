@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block page_title %}Blog Page | Rugby Shop{% endblock %}
+
+<!-- Page heading here -->
+{% block page_heading %}
+<div class="row justify-content-center">
+	<div class="col-12 col-md-6">
+		<!-- Page Headline, so the user knows which page they are on -->
+		<br>
+		<h2 class="text-white text-center">Blog</h2>
+		<p class="text-white text-center lead">This is where I´ll share news, updates and much more with you!</p>
+		<br>
+    </div>
+	</div>
+	{% endblock %}
+
+	<!-- Blog Posts -->
+	{% block content %}
+	<div class="row justify-content-center text-dark ml-2 mr-2">
+		<!-- Blog Posts column -->
+		<div class="col-lg-8 mb-5 bg-light mb-1 rounded">
+			{% for post in posts %}
+			<h1 class="mt-4 text-center"> {{ post.title }} </h1>
+			<hr>
+			<p> {{ post.published_date }} </p>
+			<img class="img-fluid" alt="Blogpost image" src="{{ MEDIA_URL }}{{ post.image }}">
+			<hr>
+			<p class="lead text-center">{{ post.content|truncatewords:30 }}</p>
+			<p class="text-right"><cite>{{ post.author }}</cite></p>
+			<p><a href="{% url 'post_details' post.id %}" class="btn btn-info rounded-1 mb-2">Read more</a></p>
+			{% endfor %}
+		</div>
+	</div>
+
+	{% endblock %}
