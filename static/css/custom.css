@@ -367,9 +367,13 @@ footer a:hover {
 .btn-info {
     letter-spacing: 3px;
     color: #fff;
-    background-color: #17a2b8;
+    background-color: #1e861a;
     border-color: #2a271e;
     border-radius: 3rem;
+}
+
+.btn-info:hover {
+    background-color: #184c16;
 }
 
 .newsletter-row #newsletter {
