@@ -233,13 +233,6 @@ caption p {
     margin: 20px;
 }
 
-/* .product-header a:hover {
-    text-decoration: none;
-}
-
-.products_card a:hover {
-    text-decoration: none; */
-}
 
 .product-info {
     margin-top: 30px;
@@ -259,6 +252,11 @@ caption p {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+/*---------- Delivery Information------------------------------------------*/
+
+.tittle-cl {
+    color: aquamarine;
+}
 
 /*---------- Subscription Form ----------------------------------------------*/
 
